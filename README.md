@@ -1,28 +1,62 @@
-# A starter webpack project for React
+# GiveMe
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+> GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis,
+  empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+## MVP
+1. Has at least one product category. 
+1. Sign in and register functionality 
+1. Search bar
+1. Form to Add/List item
+1. Display items with description  
+1. Inquire/Get button on a specific items listing page 
+1. List view of products 
+1. Notifiy listed item owner when someone uses the Enquire/Get button
+1. Testing 
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
+### CSS
+Start with Bulma - to use Bulmas variables and classes please refer to the documentation https://bulma.io/documentation/
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+## Pages 
+1. Sign in 
+1. Register 
+1. Landing page 
+1. Home page 
+1. Item list page 
+1. Add/list item page 
+1. item description page 
+1. Edit user info page 
 
-Additional components should be placed in `client/components`.
+## Stretch 
+1. Rating functionality 
+1. Use SASS with Bulma 
+1. Functionality to allow a user to ask questions about a specific item 
+1. Grid view 
+1. More categories 
 
-## Separate client/server
+## User stories 
+1. As a user I want to be able to register. 
+1. As a user I want to be able to sign in. 
+1. As a user I want to be able to search for a specific item. 
+1. As a user I want to be able to list an item to give away. 
+1. As a user I want to be able to view an item with a description.
+1. As a user I want to be able to update my profile. 
+1. As a user I want to be able to inquire about an item I am interested in.
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+## Diagarm 
+![Components](docs/Components.jpg)
+![Components](docs/Database.jpg)
 
+## User interface (proposal)
+
+[Wireframe source on Whimsical](https://whimsical.com/DUMCHFWiwkCDuKRdxJXr1T)
+
+![Landing](docs/Landing.png)
+![Home](docs/Home.png)
+![Home (Signed in)](docs/Home-(Signed-In).png)
+![Register](docs/Register.png)
+![Sign In](docs/Sign-In.png)
+![Item List](docs/Item-List.png)
+![Item Listing](docs/Item-Listing.png)
+![List an Item](docs/List-an-Item.png)
+![Edit Account](docs/Edit-Account.png)
