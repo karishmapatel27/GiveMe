@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import RegisterButton from './Register'
+import Register from './Register'
 
 function App () {
 
   return (
     <>
-      <Route exact path='/' component={ RegisterButton } />
+      <Route exact path='/' component={ Register } />
     </>
   )
 }
