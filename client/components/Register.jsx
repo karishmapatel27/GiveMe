@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 
-import { UserContext, updateUserContext } from './UserContext'
+// import { UserContext, updateUserContext } from './UserContext'
 
 function Register(props) {
- const [, setUser] = useContext(UserContext)
+//  const [, setUser] = useContext(UserContext)
  const [username, setUsername] = useState('')
  const [password, setPassword] = useState('')
  const [email, setEmail] = useState('')
