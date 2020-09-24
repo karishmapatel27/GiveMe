@@ -10,7 +10,9 @@ function App() {
 
  return (
   <>
-   <Route exact path='/' component={LandingPage} />
+   <div >
+    <Route exact path='/' component={LandingPage} />
+   </div>
   </>
  )
 }
