@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 
+
 // import { UserContext, updateUserContext } from './UserContext'
 
 function Register(props) {
