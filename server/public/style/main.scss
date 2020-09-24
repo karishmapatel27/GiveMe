@@ -12,10 +12,18 @@
 
 @import "partials/layout";
 
-.landingBackground {
+// html, body, #landingBody {
+//   height: 100%;
+//   margin: 0;
+//   background: rgb(121,9,74);
+//   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+// }
+
+.gradient {
   background: rgb(121,9,74);
-background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-  height: 100%;
+  background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+  background-size: cover;
+  height: 100vh;
   width: 100%;
   padding: 10%;
 }
@@ -25,14 +33,55 @@ background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, r
  height: auto;
 }
 
-.browseBtn{
- background: rgb(121,9,74);
-background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
- border: none;
+.browseBtn {
+  color: white;
+  background-color: rgba(255, 108, 23, 0);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-top: 6%;
+  margin-right: 6%;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
-.landingLogo{
- 
+.browseBtn:hover {
+  color: white;
+  background-color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(255, 108, 23);
+}
+
+.registerBtn {
+  color: white;
+  background-color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(255, 108, 23);
+  margin-top: 6%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.registerBtn:hover {
+  color: white;
+  background-color: rgba(255, 108, 23, 0);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.landingLogo {
+  margin-bottom: 5%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.landingBtns {
+  display: flex;
+  justify-content: center;
 }
 
 .signInContainer {

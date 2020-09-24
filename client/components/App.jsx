@@ -7,10 +7,9 @@ import SignIn from './SignIn'
 
 
 function App() {
-
  return (
   <>
-   <div >
+   <div>
     <Route exact path='/' component={LandingPage} />
    </div>
   </>
