@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import Register from './Register'
 
 import LandingPage from './LandingPage'
 import Register from './Register'
 import SignIn from './SignIn'
+
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
    </div>
   </>
  )
+
 }
 
 export default App

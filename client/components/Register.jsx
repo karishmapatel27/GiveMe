@@ -1,13 +1,13 @@
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 
-//import { UserContext, updateUserContext } from './UserContext'
+
+// import { UserContext, updateUserContext } from './UserContext'
 
 function Register(props) {
- //const [, setUser] = useContext(UserContext)
+//  const [, setUser] = useContext(UserContext)
  const [username, setUsername] = useState('')
  const [password, setPassword] = useState('')
- const [id, setGardenId] = useState('')
  const [email, setEmail] = useState('')
  const baseUrl = '/api/v1'
 
@@ -16,6 +16,7 @@ function Register(props) {
    {
     username: username,
     password: password,
+    email: email,
     id: Number(id),
     email: email
    },
@@ -54,6 +55,14 @@ function Register(props) {
      value={password}
      placeholder="password"
      onChange={(e) => setPassword(e.target.value)}
+    ></input>
+    <label className="label">email</label>
+    <input
+     className="input"
+     type="email"
+     value={email}
+     placeholder="email"
+     onChange={(e) => setEmail(e.target.value)}
     ></input>
     <button
      type="button"
