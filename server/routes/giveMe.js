@@ -5,7 +5,7 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  db.getGardens()
+  db.getGiveMe()
     .then(getGiveMe => {
       res.json({getGiveMe})
     })
