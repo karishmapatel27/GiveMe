@@ -1,20 +1,16 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
+import LandingPage from './LandingPage'
 import Register from './Register'
-import Signin from './SignIn'
-import Nav from './Nav'
+import SignIn from './SignIn'
 
 function App () {
   return (
     <>
       <div>
-        <Nav/>
+        <Route exact path='/' component={LandingPage} />
       </div>
-
-      <Route exact path='/register' component={Register} />
-
-      <Route path='/signin' component={Signin} />
     </>
   )
 }
