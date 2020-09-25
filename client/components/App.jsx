@@ -1,16 +1,28 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+
+import LandingPage from './LandingPage'
 import Register from './Register'
+import SignIn from './SignIn'
+import Nav from './Nav'
 
 import Home from './Home'
 
-function App () {
+function App() {
+ return (
+  <>
+      <div>
+        <Nav/>
+      </div>
+   <div>
+    <Route exact path='/' component={LandingPage} />
+     
+      <Route exact path='/register' component={Register} />
 
-  return (
-    <>
-      <Route exact path='/' component={ Home } />
-    </>
-  )
+        <Route path='/signin' component={Signin} />
+   </div>
+  </>
+ )
 }
 
 export default App

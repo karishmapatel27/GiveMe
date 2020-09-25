@@ -1,13 +1,15 @@
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 
+
 // import { UserContext, updateUserContext } from './UserContext'
 
 function Register(props) {
 //  const [, setUser] = useContext(UserContext)
  const [username, setUsername] = useState('')
  const [password, setPassword] = useState('')
- const [email, setEmail] = useState('')
+ const [id, setGardenId] = useState('')
+ //const [email, email] = useState('')
  const baseUrl = '/api/v1'
 
  const handleClick = () => {
@@ -57,7 +59,7 @@ function Register(props) {
     <input
      className="input"
      type="email"
-     value={email}
+    //  value={email}
      placeholder="email"
      onChange={(e) => setEmail(e.target.value)}
     ></input>
