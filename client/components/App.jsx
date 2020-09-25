@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import LandingPage from './LandingPage'
-import Register from './Register'
+// import Register from './Register'
 import SignIn from './SignIn'
 import Nav from './Nav'
 
@@ -15,7 +15,7 @@ function App () {
       <div>
         <Route exact path='/' component={LandingPage} />
 
-        <Route exact path='/register' component={Register} />
+        {/* <Route exact path='/register' component={Register} /> */}
 
         <Route path='/signin' component={SignIn} />
       </div>
