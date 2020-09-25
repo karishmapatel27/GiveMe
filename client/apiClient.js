@@ -8,7 +8,3 @@ export function getGiveMe () {
       return res.body.gardens
     })
 }
-
-export function saveImage () {
-  
-}
