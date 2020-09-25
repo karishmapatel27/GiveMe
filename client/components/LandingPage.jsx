@@ -7,8 +7,8 @@ function LandingPage() {
         <>
             <div className="landingBackground">
                 <div className="landingLogo">
+                    <h1 className="logoTitle">Give Me</h1>
                     <img className="is-rounded" src='./img/logo.png' />
-                    <h1>Give Me</h1>
                 </div>
                 <p>GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis, empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.</p>
 

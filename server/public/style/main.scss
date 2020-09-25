@@ -14,25 +14,35 @@
 
 .landingBackground {
   background: rgb(121,9,74);
-background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+  background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
   height: 100%;
   width: 100%;
   padding: 10%;
+  background-size: cover;
 }
 
 .is-rounded{
- width: 140px;
+ width: 100%;
+ max-width: 140px;
  height: auto;
 }
 
 .browseBtn{
  background: rgb(121,9,74);
-background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+ background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
  border: none;
 }
 
 .landingLogo{
- 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.logoTitle
+{
+ color: white;
+ font-size: 7vw;
 }
 
 .signInContainer {
@@ -83,6 +93,10 @@ background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, 
       min-width: 100%;
     }
   }
+  .logoTitle{
+    color: white;
+    font-size: 6vw;
+  }
 }
 @media only screen and (max-width: 500px) {
   .signInContainer {
@@ -111,6 +125,14 @@ background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, 
         max-height: 70%;
       }
     }
+  }
+  .logoTitle{
+    color: white;
+    font-size: 7vw;
+  }
+
+  .landingBackground p {
+  font-size: 15px;
   }
 }
 @media only screen and (max-width: 1024px) {
