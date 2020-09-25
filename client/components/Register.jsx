@@ -37,7 +37,7 @@ function Register (props) {
   return (
     <div className="registerForm" >
       <div>
-        <img className="is-rounded" src='./img/logo-alt.png' />
+        <img className="is-rounded" src='./img/logo-orange.png' />
       </div>
       <div className="leftRegister">
         <div className="registerTitle">

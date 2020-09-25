@@ -22,7 +22,7 @@ class LandingPage extends React.Component {
 
         <div className="landing">
           <div className="landingLogo">
-            <img className="is-rounded" src='./img/logo-alt.png' />
+            <img className="is-rounded" src='./img/logo.png' />
             <h1>Give Me</h1>
           </div>
           <p>GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis, empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.</p>
