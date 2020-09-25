@@ -8,7 +8,7 @@ function Register(props) {
  const [, setUser] = useContext(UserContext)
  const [username, setUsername] = useState('')
  const [password, setPassword] = useState('')
- const [email, email] = useState('')
+ const [email, setEmail] = useState('')
  const baseUrl = '/api/v1'
 
  const handleClick = () => {
