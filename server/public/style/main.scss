@@ -40,17 +40,41 @@
 .gradient {
   background: rgb(121,9,74);
   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+<<<<<<< HEAD
+  height: 100%;
+=======
   background-size: cover;
   height: 100vh;
+>>>>>>> f77308639b2a8ae73b04cfcc86c267c63d202d46
   width: 100%;
   padding: 10%;
+  background-size: cover;
 }
 
 .is-rounded{
- width: 140px;
+ width: 100%;
+ max-width: 140px;
  height: auto;
 }
 
+<<<<<<< HEAD
+.browseBtn{
+ background: rgb(121,9,74);
+ background: linear-gradient(216deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+ border: none;
+}
+
+.landingLogo{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.logoTitle
+{
+ color: white;
+ font-size: 7vw;
+=======
 .browseBtn {
   color: white;
   background-color: rgba(255, 108, 23, 0);
@@ -69,6 +93,7 @@
   border: solid;
   border-width: 1px;
   border-color: rgb(255, 108, 23);
+>>>>>>> f77308639b2a8ae73b04cfcc86c267c63d202d46
 }
 
 .registerBtn {
@@ -109,11 +134,72 @@
 
 
 @media only screen and (max-width: 768px) {
+<<<<<<< HEAD
+  .signInContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .signInLeft {
+      width: 100%;
+      padding-top: 15%;
+    }
+  }
+  .registerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .leftRegister {
+      min-width: 100%;
+    }
+  }
+  .logoTitle{
+    color: white;
+    font-size: 6vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .signInContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .signInLeft {
+      width: 100%;
+    }
+    .signInRight {
+      img {
+        max-height: 50%;
+      }
+    }
+  }
+  .registerContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .leftRegister {
+      max-height: 50%;
+    }
+    .rightRegister {
+      max-height: 50%;
+      img {
+        max-height: 70%;
+      }
+    }
+  }
+  .logoTitle{
+    color: white;
+    font-size: 7vw;
+  }
+
+  .landingBackground p {
+  font-size: 15px;
+  }
+=======
   
 }
 @media only screen and (max-width: 500px) {
   
  
+>>>>>>> f77308639b2a8ae73b04cfcc86c267c63d202d46
 }
 @media only screen and (max-width: 1024px) {
   
