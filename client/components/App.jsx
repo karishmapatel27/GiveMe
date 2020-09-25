@@ -5,6 +5,8 @@ import LandingPage from './LandingPage'
 import Register from './Register'
 import SignIn from './SignIn'
 import Home from './Home'
+import ListAnItem from './ListAnItem'
+import BrowseListings from './BrowseListings'
 
 function App () {
   return (
@@ -14,6 +16,8 @@ function App () {
       <div>
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/Home' component={Home} />
+        <Route exact path='/ListAnItem' component={ListAnItem} />
+        <Route exact path='/BrowseListings' component={BrowseListings} />
 
         <Route exact path='/register' component={Register} />
 

@@ -1,9 +1,8 @@
 import React, { useEffect, useContext } from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { isAuthenticated } from 'authenticare/client'
 
 import { UserContext, updateUserContext } from './UserContext'
-import SignIn from './SignIn'
 
 function Home () {
   const [, setUser] = useContext(UserContext)
@@ -19,9 +18,14 @@ function Home () {
       <div className='container'>
         <h1>Home</h1>
         <div className='columns'>
-          <div className='landingBtns'>
-            <Link className="button browseBtn" to={'/SignIn'}>Sign In</Link>
-          </div>
+          <label className="label ">Search</label>
+          <input
+            className="input "
+            id="searchbar"
+            name="searchbar"
+            placeholder="Search"
+            type="text"
+          />
         </div>
       </div>
     </>

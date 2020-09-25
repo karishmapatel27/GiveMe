@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 class LandingPage extends React.Component {

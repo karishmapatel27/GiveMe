@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 
-
-
 function ListAnItem () {
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
@@ -34,16 +32,14 @@ function ListAnItem () {
               name="category"
               value={category} onChange={event => setCategory(event.target.value)}/>
 
-
             <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)}/>
- 
 
             <h5>Item Description</h5>
             <textarea className="textarea is-normal"
               placeholder="Item Description"
               name="description"
               value={description} onChange={event => setDescription(event.target.value)}/>
-              
+
             <h5>Location</h5>
             <input className="input is-normal" type="text"
               placeholder="location"
@@ -56,4 +52,5 @@ function ListAnItem () {
     </>
   )
 }
+
 export default ListAnItem
