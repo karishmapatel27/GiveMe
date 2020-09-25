@@ -2,14 +2,13 @@ import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
 import { Link } from 'react-router-dom'
 
-// import { UserContext, updateUserContext } from './UserContext'
+import { UserContext, updateUserContext } from './UserContext'
 
 function Register (props) {
-//  const [, setUser] = useContext(UserContext)
+  const [, setUser] = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [id, setUserId] = useState('')
-  const [email, setUserEmail] = useState('')
+  const [email, setEmail] = useState('')
   const baseUrl = '/api/v1'
 
   const handleClick = () => {
@@ -17,16 +16,14 @@ function Register (props) {
       {
         username: username,
         password: password,
-        // email: email,
-        id: Number(id)
-        // email: email
+        email: email
       },
       { baseUrl }
     )
       .then(() => {
         if (isAuthenticated()) {
-          // updateUserContext(setUser)
-          return props.history.push('/giveMe')
+          updateUserContext(setUser)
+          return props.history.push('/Home')
         }
         return null
       })

@@ -1,3 +1,5 @@
+import request from 'superagent'
+
 const rootUrl = '/api/v1'
 
 export function getGiveMe () {
@@ -5,4 +7,8 @@ export function getGiveMe () {
     .then(res => {
       return res.body.gardens
     })
+}
+
+export function saveImage () {
+  
 }
