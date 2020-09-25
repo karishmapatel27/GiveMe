@@ -16,8 +16,6 @@ function Register(props) {
     username: username,
     password: password,
     email: email,
-    id: Number(id),
-    email: email
    },
    { baseUrl }
   )
