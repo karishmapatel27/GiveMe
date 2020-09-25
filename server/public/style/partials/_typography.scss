@@ -11,10 +11,23 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $weight-bold
+  font-weight: $weight-bold;
 }
 
-p{
+.landingLogo h1, h2, h3, h4, h5, h6 {
+  font-weight: $weight-bold;
+  color: white;
+}
+
+.browseBtn {
+  font-weight: $weight-bold;
+}
+
+.registerBtn {
+  font-weight: $weight-bold;
+}
+
+p {
   color: white
 }
 
