@@ -16,15 +16,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .landingLogo h1, h2, h3, h4, h5, h6 {
   font-weight: $weight-bold;
+  font-size: 40px;
   color: white;
+}
+
+.landing-text p {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.formLogo h1, h2, h3, h4, h5, h6 {
+  font-weight: $weight-bold;
+  font-size: 40px;
+  color: rgb(255, 108, 23);
 }
 
 .browseBtn {
   font-weight: $weight-bold;
+  font-size: 1.5rem;
+
 }
 
-.registerBtn {
+.primaryBtn {
   font-weight: $weight-bold;
+  font-size: 1.5rem;
+}
+
+.form h1{
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
 }
 
 p {

@@ -12,13 +12,11 @@ function App () {
       {/* <div>
         <Nav/>
       </div> */}
-      <div>
-        <Route exact path='/' component={LandingPage} />
+      <Route exact path='/' component={LandingPage} />
 
-        <Route exact path='/register' component={Register} />
+      <Route exact path='/register' component={Register} />
 
-        <Route path='/signin' component={SignIn} />
-      </div>
+      <Route path='/signin' component={SignIn} />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { register, isAuthenticated } from 'authenticare/client'
+import { Link } from 'react-router-dom'
 
 // import { UserContext, updateUserContext } from './UserContext'
 
@@ -35,24 +36,29 @@ function Register (props) {
   }
 
   return (
-    <div className="registerForm" >
-      <div>
-        <img className="is-rounded" src='./img/logo-orange.png' />
-      </div>
-      <div className="leftRegister">
-        <div className="registerTitle">
-          <h1>Register</h1>
+    <div className="gradient-background">
+      <div className="wrapper">
+        <div className="form" >
+          <div className='formLogo'>
+            <img className="is-rounded" src='./img/logo-orange.png' />
+          </div>
+          <div className="formRight">
+
+            <h1>Register</h1>
+
+            <label className="label">email</label>
+            <input className="input1" type="email" onChange={(e) => setUserEmail(e.target.value)}></input>
+
+            <label className="label">Username</label>
+            <input className="input1" type="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+
+            <label className="label">Password</label>
+            <input className="input1" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <button type="button" className="button primaryBtn" onClick={handleClick} data-testid="submitButton">Register</button>
+            <Link className="" onClick={handleClick} to="/signin">Sign In</Link>
+
+          </div>
         </div>
-        <label className="label">email</label>
-        <input className="input" type="email" placeholder="email" onChange={(e) => setUserEmail(e.target.value)}></input>
-
-        <label className="label">Username</label>
-        <input className="input" type="username" value={username} placeholder="username" onChange={(e) => setUsername(e.target.value)}></input>
-
-        <label className="label">Password</label>
-        <input className="input" type="password" value={password} placeholder="password" onChange={(e) => setPassword(e.target.value)}></input>
-
-        <button type="button" className="button is-primary" onClick={handleClick} data-testid="submitButton">Register</button>
       </div>
     </div>
   )
