@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-
 import LandingPage from './LandingPage'
 import Register from './Register'
 import SignIn from './SignIn'
@@ -8,7 +7,7 @@ import Home from './Home'
 import ListAnItem from './ListAnItem'
 import BrowseListings from './BrowseListings'
 
-function App () {
+function App() {
   return (
     <>
       <div>

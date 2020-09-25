@@ -63,7 +63,7 @@ function SignIn (props) {
           data-testid="submit-button"
           onClick={handleClick}
         >
-     Sign in
+          Sign in
         </button>
       </div>
     </div>

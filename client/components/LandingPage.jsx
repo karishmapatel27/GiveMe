@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 class LandingPage extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     const backgroundGradient = 'gradient'
     const landing = document.getElementsByClassName('landing')
     if (landing) {
@@ -13,17 +13,13 @@ class LandingPage extends React.Component {
     }
   }
 
-  render () {
+  render() {
     return (
       <>
-        {/* <Helmet >
-         <body id='landingBody' />
-        </Helmet> */}
-
-        <div className="landing">
+        <div className="landingBackground">
           <div className="landingLogo">
-            <img className="is-rounded" src='./img/logo-alt.png' />
-            <h1>Give Me</h1>
+            <h1 className="logoTitle">Give Me</h1>
+            <img className="is-rounded" src='./img/logo.png' />
           </div>
           <p>GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis, empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.</p>
 
