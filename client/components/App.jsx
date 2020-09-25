@@ -6,22 +6,21 @@ import Register from './Register'
 import SignIn from './SignIn'
 import Nav from './Nav'
 
-
-function App() {
- return (
-  <>
-      <div>
+function App () {
+  return (
+    <>
+      {/* <div>
         <Nav/>
-      </div>
-   <div>
-    <Route exact path='/' component={LandingPage} />
-     
-      <Route exact path='/register' component={Register} />
+      </div> */}
+      <div>
+        <Route exact path='/' component={LandingPage} />
 
-        <Route path='/signin' component={Signin} />
-   </div>
-  </>
- )
+        <Route exact path='/register' component={Register} />
+
+        <Route path='/signin' component={SignIn} />
+      </div>
+    </>
+  )
 }
 
 export default App
