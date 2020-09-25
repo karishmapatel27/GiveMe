@@ -7,7 +7,7 @@ import Home from './Home'
 import ListAnItem from './ListAnItem'
 import BrowseListings from './BrowseListings'
 
-function App() {
+function App () {
   return (
     <>
       <div>
@@ -18,9 +18,10 @@ function App() {
         <Route exact path='/ListAnItem' component={ListAnItem} />
         <Route exact path='/BrowseListings' component={BrowseListings} />
 
-      <Route exact path='/register' component={Register} />
+        <Route exact path='/register' component={Register} />
 
-      <Route path='/signin' component={SignIn} />
+        <Route path='/signin' component={SignIn} />
+      </div>
     </>
   )
 }
