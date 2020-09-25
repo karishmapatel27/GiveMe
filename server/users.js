@@ -1,4 +1,4 @@
-const connection = require('./connection')
+const connection = require('./db/connection')
 const { generateHash } = require('authenticare/server')
 
 module.exports = {
@@ -20,7 +20,7 @@ function createUser (user, db = connection) {
     .then((passwordHash) => {
       return db('users').insert({
         username: user.username,
-        garden_id: user.garden,
+        email: user.email,
         hash: passwordHash,
         isAdmin: false
       })
