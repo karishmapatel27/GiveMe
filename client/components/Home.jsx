@@ -16,25 +16,18 @@ function Home () {
   }, [])
 
   return (
-
     <>
       <div className='container'>
         <h1>Home</h1>
-              <Nav/>
+        <Nav/>
         <CategoriesMenu/>
         <div className='columns'>
-          <label className="label ">Search</label>
-          <input
-            className="input "
-            id="searchbar"
-            name="searchbar"
-            placeholder="Search"
-            type="text"
-          />
+          {/* <label className="label ">Search</label> */}
+          {/* <input className="input" id="searchbar" name="searchbar" placeholder="Search" type="text" /> */}
           <Link className="" to="/ListAnItem">Add Item</Link>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
