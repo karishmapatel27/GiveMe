@@ -28,27 +28,8 @@
   --shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-// .info {
-//   background: var(--primary);
-//   box-shadow: var(--shadow);
-//   display: grid;
-//   gap: 30px;
-//   grid-template-columns: repeat(2, 1fr);
-//   padding: 3rem;
-// }
-
-// body {
-//   background: rgb(121,9,74);
-//   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-//   background-size: cover;
-//   height: 100vh;
-//   width: 100%;
-//   padding: 10%;
-// }
-
 .gradient-background {
   background: rgb(121,9,74);
-
   background: $gradient;
   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
   height: 100%;
@@ -88,15 +69,6 @@
   width: 100%;
   
  }
-
-
-
-//  .registerForm .input:focus {
-//   border-top-style: hidden;
-//   border-right-style: hidden;
-//   border-left-style: hidden;
-//   outline: none;
-//  }
 
 a {
   color: rgb(255, 108, 23);
