@@ -1,56 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { logOff } from 'authenticare/client'
-import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
+// import Link from 'react-dom'
 
-export default function Nav (props) {
-  let currentPage = props.location.pathname
-  let navLinks = null
-
-  switch (currentPage) {
-    case '/':
-      navLinks = (
-        <>
-          <Link to="/SignIn">Sign in</Link>
-          <Link to="/Register">Register</Link>
-        </>
-      )
-      break
-    case '/SignIn':
-      navLinks = (
-        <>
-          <Link to="/Register">Register</Link>
-          <Link to="/">Home</Link>
-        </>
-      )
-      break
-    case '/Register':
-      navLinks = (
-        <>
-          <Link to="/SignIn">Sign in</Link>
-          <Link to="/">Home</Link>
-        </>
-      )
-      break
-    default:
-      navLinks = (
-        <>
-          <Link to="/Signin">Sign in</Link>
-          <Link to="/register">Register</Link>
-        </>
-      )
-  }
+// import categoriesMenu from './CategoriesMenu'
+function Nav () {
   return (
-    <>
-      <div className="nav">
-        <IfAuthenticated>
-          <Link to="/" onClick={logOff}>
-            Log out
-          </Link>
-          <Link to="/">Home</Link>
-        </IfAuthenticated>
-        <IfNotAuthenticated>{navLinks}</IfNotAuthenticated>
-      </div>
-    </>
+    <span className='alingElementNav'>
+      <img className="nav-logo" src='./img/logo-white.png' />
+      <span className='alingSearchBar'>
+        <input
+          className="input is-rounded is-medium searchBar "
+          id="searchbar "
+          name="searchbar"
+          placeholder="Search"
+
+          type="email"
+        />
+      </span>
+    </span >
   )
 }
+export default Nav
