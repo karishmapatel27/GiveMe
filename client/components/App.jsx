@@ -13,18 +13,14 @@ function App () {
   return (
     <>
 
-      <div>
-      </div>
-      <div>
-        <Route exact path='/' component={LandingPage} />
-        <Route exact path='/Home' component={Home} />
-        <Route exact path='/ListAnItem' component={ListAnItem} />
-        <Route exact path='/BrowseListings' component={BrowseListings} />
+      <Route exact path='/' component={LandingPage} />
+      <Route exact path='/Home' component={Home} />
+      <Route exact path='/ListAnItem' component={ListAnItem} />
+      <Route exact path='/BrowseListings' component={BrowseListings} />
 
-        <Route exact path='/register' component={Register} />
+      <Route exact path='/register' component={Register} />
 
-        <Route path='/signin' component={SignIn} />
-      </div>
+      <Route path='/signin' component={SignIn} />
     </>
   )
 }
