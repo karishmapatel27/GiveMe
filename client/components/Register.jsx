@@ -37,7 +37,7 @@ function Register (props) {
       <div className="wrapper">
         <div className="form" >
           <div className='formLogo'>
-            <img className="is-rounded" src='./img/logo-orange.png' />
+            <img className="is-rounded" src='./img/logo-txt-orange.png' />
           </div>
           <div className="formRight">
 

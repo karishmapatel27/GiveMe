@@ -6,8 +6,7 @@ const LandingPage = () => {
     <div className="gradient-background">
       <div className="landing-wrapper">
         <div className="landingLogo">
-          <img className="is-rounded" src='./img/logo.png' />
-          <h1>Give Me</h1>
+          <img className="is-rounded" src='./img/logo-txt-white.png' />
         </div>
         <div className='landing-text'>
           <p>
