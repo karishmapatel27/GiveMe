@@ -1,8 +1,10 @@
 import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { isAuthenticated } from 'authenticare/client'
-
 import { UserContext, updateUserContext } from './UserContext'
+
+import Nav from './Nav'
+import CategoriesMenu from './CategoriesMenu'
 
 function Home () {
   const [, setUser] = useContext(UserContext)
@@ -14,21 +16,12 @@ function Home () {
   }, [])
 
   return (
-    <>
-      <div className='container'>
-        <h1>Home</h1>
-        <div className='columns'>
-          <label className="label ">Search</label>
-          <input
-            className="input "
-            id="searchbar"
-            name="searchbar"
-            placeholder="Search"
-            type="text"
-          />
-        </div>
+    <div className="gradient-background">
+      <Nav/>
+      <div>
+        <CategoriesMenu/>
       </div>
-    </>
+    </div>
   )
 }
 

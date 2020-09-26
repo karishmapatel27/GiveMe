@@ -50,7 +50,20 @@
 .wrapper {
   padding: 8%
 }
+.categoriesMenu{
+  margin-left: 1110px;
+  margin-top: 15px;
+}
+.alingElementNav{
+  display: flex;
+}
 
+.nav-logo{
+  margin-top: 15px;
+  margin-left: 70px;
+  width: 100px;
+  height: auto;
+ }
 
 .is-rounded{
   width: 200px;
@@ -68,6 +81,15 @@
   border-left-style: hidden;
   width: 100%;
   
+ }
+.alingSearchBar{
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
+ .searchBar {
+  width: 80%;
  }
 
 a {
