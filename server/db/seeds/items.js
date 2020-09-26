@@ -6,31 +6,31 @@ exports.seed = knex =>
         name: 'couch',
         category: 'random',
         photo: 'img',
-        description: 'This is a couch', 
+        description: 'This is a couch',
         location: 'Auckland'
       },
       {
-        id: 2, 
-        name: 'lego', 
-        category: 'random', 
-        photo: 'img', 
-        description: 'This is some legos', 
+        id: 2,
+        name: 'lego',
+        category: 'random',
+        photo: 'img',
+        description: 'This is some legos',
         location: 'Wellington'
       },
       {
-        id: 3, 
-        name: 'bike', 
-        category: 'random', 
-        photo: 'img', 
-        description: 'This is a bike', 
+        id: 3,
+        name: 'bike',
+        category: 'random',
+        photo: 'img',
+        description: 'This is a bike',
         location: 'Christchurch'
       },
       {
-        id: 4, 
-        name: 'books', 
-        category: 'random', 
-        photo: 'img', 
-        description: 'These are books', 
+        id: 4,
+        name: 'books',
+        category: 'random',
+        photo: 'img',
+        description: 'These are books',
         location: 'Hamilton'
       }
     ]))
