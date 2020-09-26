@@ -12,13 +12,6 @@
 
 @import "partials/layout";
 
-// html, body, #landingBody {
-//   height: 100%;
-//   margin: 0;
-//   background: rgb(121,9,74);
-//   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-// }
-
 // CARD STYLING
 
 :root {
@@ -62,13 +55,14 @@ html {
 }
 
 .wrapper {
-  padding: 8%
+  padding: 10%
 }
 
 .categoriesMenu{
   margin-left: 1110px;
   margin-top: 15px;
 }
+
 .alingElementNav{
   display: flex;
 }
@@ -104,7 +98,8 @@ html {
     margin-top: 4%;
     margin-bottom: 4%;
  }
-.alingSearchBar{
+
+.alingSearchBar {
   margin: auto;
   width: 70%;
   padding: 10px;
@@ -119,23 +114,20 @@ a {
   text-align: center;
   display: grid;
 }
+
+a:hover {
+  color: rgb(253, 137, 69);
+}
  
 .form .is-rounded1 {
  width: 200px;
  height: auto;
- margin-bottom: -100px;
 }
 
-.landingLogo{
+.landingLogo {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-}
-
-.logoTitle
-{
- color: white;
- font-size: 7vw;
 }
 
 .browseBtn {
@@ -163,7 +155,7 @@ a {
   font-weight: bold;
 }
 
-.primaryBtn{
+.primaryBtn {
   color: white;
   background-color: rgb(255, 108, 23);
   border: solid;
@@ -175,7 +167,7 @@ a {
   font-weight: bold;
 }
 
-.primaryBtn:hover{
+.primaryBtn:hover {
   color: white;
   background-color: rgb(253, 137, 69);
   border: solid;
@@ -187,25 +179,29 @@ a {
   font-weight: bold;
 }
 
-.formRight .primaryBtn{
+.formRight .primaryBtn {
   margin: 50px 20px 0px;
   align-content: center;
   display: grid;
 }
 
-.formRight{
-   padding-top: 10%;
-   padding-right: 10%;
-   padding-bottom: 10%;
-   padding-left: 0%;
+.formRight {
+  display: grid;
+  padding: 5%;
+  min-width: 60%;
+}
+
+.formRight {
+  display: grid;
+  padding: 5%;
+  // min-width: 60%;
 }
 
 .formLeft {
   display: grid;
   justify-content: center;
   text-align: center;
-  // padding: 5%;
-  margin-top: 30px;
+  align-items: center;
 }
 
 .landingBtns {
@@ -215,24 +211,23 @@ a {
 }
 
 .form {
+  display: grid;
   background-color: white;
   box-shadow: var(--shadow);
-  display: grid;
-  // gap: 10px;
   grid-template-columns: repeat(2, 1fr);
-  //padding: 5rem;
-  margin: 0rem 25rem;
+  padding: 3rem;
+  margin: 10rem 25rem;
   border-radius: 25px;
 }
 
-.itemForm{
+.itemForm {
   background-color: white;
   box-shadow: var(--shadow);
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
-  margin: 4% 5%;
+  margin: 5% 10%;
   border-radius: 25px;
-  // max-width: 80vw;
+  max-width: 90rem;
   max-height: 80vh;
 }
 
@@ -244,13 +239,13 @@ a {
   min-width: 80%;
 }
 
-.imgContainer{
-  width: 90%;
-}
+// .imgContainer {
+//   width: 90%;
+// }
 
-form {
-  margin-top: 8%;
-}
+// form {
+//   margin-top: 8%;
+// }
 
 
 @media only screen and (max-width: 768px) {
