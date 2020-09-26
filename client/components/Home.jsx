@@ -26,6 +26,7 @@ function Home () {
             placeholder="Search"
             type="text"
           />
+          <Link className="" to="/ListAnItem">Add Item</Link>
         </div>
       </div>
     </>
