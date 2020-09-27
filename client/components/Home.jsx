@@ -16,17 +16,25 @@ function Home () {
   }, [])
 
   return (
-    <div className="gradient-background">
-      <Nav/>
-      <div>
+    <>
+      <div className='container'>
+        <h1>Home</h1>
+        <Nav/>
         <CategoriesMenu/>
+        <div className='columns'>
+          {/* <label className="label ">Search</label> */}
+          {/* <input className="input" id="searchbar" name="searchbar" placeholder="Search" type="text" /> */}
+          <Link className="" to="/ListAnItem">Add Item</Link>
+          <Link to="/ItemDetails">Item Details</Link>
+        </div>
       </div>
       <div>
         <p>
           <GalleryImage/>
         </p>
       </div>
-    </div>
+    </>
+
   )
 }
 

@@ -34,16 +34,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .browseBtn {
   font-weight: $weight-bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
 }
 
 .primaryBtn {
   font-weight: $weight-bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .form h1{
+  color: rgb(255, 108, 23);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.itemForm h1{
   color: rgb(255, 108, 23);
   font-size: 2rem;
   text-align: center;
@@ -60,6 +66,10 @@ p {
   span {
     color: $yellow;
   }
+}
+
+.itemInfo{
+  color: rgb(63, 62, 62);
 }
 
 .word-wrap {
