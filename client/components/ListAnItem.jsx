@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
 
-function ListAnItem () {
+function ListAnItem() {
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState('')
@@ -11,7 +11,7 @@ function ListAnItem () {
 
   const item = { name, category, photo, description, location }
 
-  function handleSubmit (e) {
+  function handleSubmit(e) {
     e.preventDefault()
     // addItem(name, category, photo, description, location)
     addItem(item)
@@ -33,9 +33,9 @@ function ListAnItem () {
 
             <input className="formInput" type="text" name="category" placeholder="Category" value={category} onChange={event => setCategory(event.target.value)}/>
 
-            <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)}/>
+            <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)} />
 
-            <textarea className="textarea" placeholder="Item Description" name="description" value={description} onChange={event => setDescription(event.target.value)}/>
+            <textarea className="textarea" placeholder="Item Description" name="description" value={description} onChange={event => setDescription(event.target.value)} />
 
             <input className="formInput" type="text" placeholder="Location" name="location" value={location} onChange={event => setLocation(event.target.value)}/>
 
