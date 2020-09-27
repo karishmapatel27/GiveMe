@@ -8,6 +8,7 @@ import SignIn from './SignIn'
 import Home from './Home'
 import ListAnItem from './ListAnItem'
 import BrowseListings from './BrowseListings'
+import ItemDetails from './ItemDetails'
 
 function App () {
   return (
@@ -19,6 +20,7 @@ function App () {
       <Route exact path='/BrowseListings' component={BrowseListings} />
 
       <Route exact path='/register' component={Register} />
+      <Route exact path='/ItemDetails' component={ItemDetails}/>
 
       <Route path='/signin' component={SignIn} />
     </>

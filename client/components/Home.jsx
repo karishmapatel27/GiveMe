@@ -25,6 +25,7 @@ function Home () {
           {/* <label className="label ">Search</label> */}
           {/* <input className="input" id="searchbar" name="searchbar" placeholder="Search" type="text" /> */}
           <Link className="" to="/ListAnItem">Add Item</Link>
+          <Link to="/ItemDetails">Item Details</Link>
         </div>
       </div>
     </>
