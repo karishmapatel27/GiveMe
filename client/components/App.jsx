@@ -9,6 +9,7 @@ import Home from './Home'
 import ListAnItem from './ListAnItem'
 import BrowseListings from './BrowseListings'
 import ItemDetails from './ItemDetails'
+import SearchBar from './SearchBar'
 
 function App () {
   return (
@@ -21,6 +22,7 @@ function App () {
 
       <Route exact path='/register' component={Register} />
       <Route exact path='/ItemDetails' component={ItemDetails}/>
+      <Route exact path='/SearchBar' component={SearchBar} />
 
       <Route path='/signin' component={SignIn} />
     </>

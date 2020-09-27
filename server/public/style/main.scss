@@ -199,12 +199,6 @@ a:hover {
   min-width: 60%;
 }
 
-.formRight {
-  display: grid;
-  padding: 5%;
-  // min-width: 60%;
-}
-
 .formLeft {
   display: grid;
   justify-content: center;
@@ -259,26 +253,45 @@ a:hover {
 .itemDetails{
     background-color: white;
     box-shadow: var(--shadow);
-    //grid-template-columns: repeat(2, 1fr);
     display: flex;
     margin: 5% 10%;
     border-radius: 25px;
-    // max-width: 90rem;
-    // max-height: 80vh;
     padding: 5%;
-    // align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .itemImg{
-   
-    // max-height: 80vh;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5%;
+   margin-bottom: 5%;
 }
 
 .description{
-
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  
 }
+
+.btnContainer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+.btnContainer .primaryBtn {
+  margin: 50px 20px 0px 20px;
+  align-content: center;
+  display: grid;
+}
+
 
 
 @media only screen and (max-width: 768px) {

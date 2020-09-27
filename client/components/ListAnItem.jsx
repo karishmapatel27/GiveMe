@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
+import { addItem } from '../apiClient'
 
 function ListAnItem () {
   const [name, setName] = useState('')
@@ -8,9 +9,12 @@ function ListAnItem () {
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
 
+  const item = { name, category, photo, description, location }
+
   function handleSubmit (e) {
     e.preventDefault()
-    console.log(name, category, photo, description, location)
+    // addItem(name, category, photo, description, location)
+    addItem(item)
   }
 
   return (
@@ -46,3 +50,4 @@ function ListAnItem () {
 }
 
 export default ListAnItem
+
