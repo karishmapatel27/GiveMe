@@ -43,6 +43,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
+// .alingSearchBar .primaryBtn:focus {
+//   font-weight: $weight-bold;
+//   font-size: 0.8rem;
+// }
+
+.alingSearchBar .primaryBtn {
+  font-weight: $weight-bold;
+  font-size: 0.8rem;
+}
+
+.alingSearchBar .primaryBtn:hover {
+  font-weight: $weight-bold;
+  font-size: 0.8rem;
+}
+
 .form h1{
   color: rgb(255, 108, 23);
   font-size: 2rem;
