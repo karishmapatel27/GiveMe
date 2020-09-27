@@ -13,7 +13,7 @@ function CategoriesMenu () {
   }
 
   return (
-    <div className='categoriesMenu '>
+    <div >
       <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
         <div className="dropdown-trigger">
           <button onClick={handleToggle} className="button primaryBtn " aria-haspopup="true" aria-controls="dropdown-menu3">
