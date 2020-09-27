@@ -12,7 +12,7 @@ import ItemDetails from './ItemDetails'
 import SearchBar from './SearchBar'
 import ContactUs from './ContactUs'
 
-function App() {
+function App () {
   return (
     <>
 

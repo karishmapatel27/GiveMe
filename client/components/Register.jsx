@@ -8,7 +8,7 @@ function Register (props) {
   const [, setUser] = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [email, setUserEmail] = useState('')
+  const [email, setEmail] = useState('')
   const baseUrl = '/api/v1'
 
   const handleClick = () => {
@@ -41,7 +41,7 @@ function Register (props) {
 
         <h1>Register</h1>
 
-        <input className="formInput" placeholder="Email" type="email" onChange={(e) => setUserEmail(e.target.value)}></input>
+        <input className="formInput" placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}></input>
 
         <input className="formInput" placeholder="Username" type="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
 
