@@ -13,7 +13,6 @@
 @import "partials/layout";
 
 // CARD STYLING
-
 :root {
   --primary: #ddd;
   --dark: #201f1f;
@@ -40,10 +39,6 @@ html {
   background-size: cover;
   margin: 0;
   padding: 0;
-}
-
-body {
-  height: 100%;
 }
 
 .landing-text {
@@ -73,12 +68,18 @@ body {
 
 .alingElementNav{
   display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .nav-logo{
-  margin-top: 15px;
-  margin-left: 70px;
-  width: 100px;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  width: 50px;
   height: auto;
  }
 
@@ -101,16 +102,31 @@ body {
   margin-bottom: 4%;
  }
 
- .textarea {
-    border-width: 1.5px;
-    margin-top: 4%;
-    margin-bottom: 4%;
- }
+.textarea {
+   border-width: 1.5px;
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
 
 .alingSearchBar {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 70%;
-  padding: 10px;
+}
+
+
+.alingSearchBar .primaryBtn {
+  margin: 0 20px 0 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.alingSearchBar .primaryBtn:focus {
+  // margin: 0 20px 0 20px;
+  // padding-top: 0;
+  // padding-bottom: 0;
 }
 
  .searchBar {
@@ -181,9 +197,14 @@ a:hover {
   border: solid;
   border-width: 1px;
   border-color: rgb(253, 137, 69);
-  margin-top: 6%;
-  padding: 10px 30px;
-  border-radius: 30px;
+}
+
+.primaryBtn:focus {
+  color: white;
+  background-color: rgb(253, 137, 69);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(253, 137, 69);
   font-weight: bold;
 }
 
@@ -241,14 +262,6 @@ a:hover {
   min-width: 80%;
 }
 
-// .imgContainer {
-//   width: 90%;
-// }
-
-// form {
-//   margin-top: 8%;
-// }
-
 //----------- ItemDetails----------------//
 .itemDetails{
     background-color: white;
@@ -282,8 +295,6 @@ a:hover {
   width: 100%;
   align-items: center;
   justify-content: center;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 .btnContainer .primaryBtn {
