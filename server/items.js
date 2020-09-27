@@ -1,5 +1,4 @@
-const { resolve } = require('../client/webpack.config')
-const connection = require('./db/connection')
+const connection = require('./connection')
 
 const items = require('./db/seeds/items')
 
