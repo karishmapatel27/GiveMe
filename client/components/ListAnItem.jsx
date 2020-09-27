@@ -19,7 +19,6 @@ function ListAnItem() {
 
   return (
     <>
-      {/* <div className="wrapper"> */}
       <div className="itemForm">
 
         <div className='imgContainer'>
@@ -30,21 +29,20 @@ function ListAnItem() {
           <h1>List a new item</h1>
           <form onSubmit={handleSubmit}>
 
-            <input className="input1" type="text" name="name" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)} />
+            <input className="formInput" type="text" name="name" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}/>
 
-            <input className="input1" type="text" name="category" placeholder="Category" value={category} onChange={event => setCategory(event.target.value)} />
+            <input className="formInput" type="text" name="category" placeholder="Category" value={category} onChange={event => setCategory(event.target.value)}/>
 
             <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)} />
 
             <textarea className="textarea" placeholder="Item Description" name="description" value={description} onChange={event => setDescription(event.target.value)} />
 
-            <input className="input1" type="text" placeholder="Location" name="location" value={location} onChange={event => setLocation(event.target.value)} />
+            <input className="formInput" type="text" placeholder="Location" name="location" value={location} onChange={event => setLocation(event.target.value)}/>
 
             <button className="button primaryBtn">Add Item</button>
           </form>
         </div>
       </div>
-      {/* </div> */}
     </>
   )
 }
