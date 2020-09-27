@@ -2,6 +2,7 @@ import React from 'react'
 // import Link from 'react-dom'
 
 import CategoriesMenu from './CategoriesMenu'
+
 function Nav () {
   return (
     <div className='alingElementNav'>
