@@ -2,10 +2,10 @@ import React, { useState, useContext } from 'react'
 import { isAuthenticated, signIn } from 'authenticare/client'
 import { Link } from 'react-router-dom'
 
-// import { UserContext, updateUserContext } from './UserContext'
+import { UserContext, updateUserContext } from './UserContext'
 
 function SignIn (props) {
-  // const [, setUser] = useContext(UserContext)
+  const [, setUser] = useContext(UserContext)
   const [form, setForm] = useState({
     username: '',
     password: ''

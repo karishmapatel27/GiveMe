@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from 'react'
-import { Link } from 'react-router-dom'
 import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
 
