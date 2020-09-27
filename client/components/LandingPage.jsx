@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <div className="landing-wrapper">
       <div className="landingLogo">
-        <img className="is-rounded1" src='./img/logo-txt-white.png' />
+        <img className="logoImg" src='./img/logo-txt-white.png' />
       </div>
       <div className='landing-text'>
         <p>
@@ -13,7 +13,7 @@ const LandingPage = () => {
         </p>
       </div>
 
-      <div className='landingBtns'>
+      <div className='landingBtnsContainer'>
         <Link className="button browseBtn" to="/home">Browse</Link>
         <Link className="button primaryBtn" to='/register'>Register</Link>
       </div>
