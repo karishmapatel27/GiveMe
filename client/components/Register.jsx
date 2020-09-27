@@ -35,17 +35,17 @@ function Register (props) {
   return (
     <div className="form" >
       <div className='formLeft'>
-        <img className="is-rounded1" src='./img/logo-txt-orange.png' />
+        <img className="logoImg" src='./img/logo-txt-orange.png' />
       </div>
       <div className="formRight">
 
         <h1>Register</h1>
 
-        <input className="input1" placeholder="Email" type="email" onChange={(e) => setUserEmail(e.target.value)}></input>
+        <input className="formInput" placeholder="Email" type="email" onChange={(e) => setUserEmail(e.target.value)}></input>
 
-        <input className="input1" placeholder="Username" type="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+        <input className="formInput" placeholder="Username" type="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
 
-        <input className="input1" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+        <input className="formInput" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
 
         <button type="button" className="button primaryBtn" onClick={handleClick} data-testid="submitButton">Register</button>
 
