@@ -44,7 +44,7 @@ function Register (props) {
             <h1>Register</h1>
 
             <label className="label">email</label>
-            <input className="input1" type="email" onChange={(e) => setUserEmail(e.target.value)}></input>
+            <input className="input1" type="email" onChange={(e) => setEmail(e.target.value)}></input>
 
             <label className="label">Username</label>
             <input className="input1" type="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>

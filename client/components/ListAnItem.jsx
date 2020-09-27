@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
+import { addItem } from '../apiClient'
 
 function ListAnItem () {
   const [name, setName] = useState('')
@@ -8,9 +9,12 @@ function ListAnItem () {
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
 
+  const item = { name, category, photo, description, location }
+
   function handleSubmit (e) {
     e.preventDefault()
-    console.log(name, category, photo, description, location)
+    // addItem(name, category, photo, description, location)
+    addItem(item)
   }
 
   return (
@@ -18,7 +22,7 @@ function ListAnItem () {
       <div className="list-item-form columns is-8">
         <div className="column">
           <h1>List new item</h1>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={ handleSubmit }>
             <h5>Item Name</h5>
 
             <input className="input is-normal" type="text"
@@ -54,3 +58,4 @@ function ListAnItem () {
 }
 
 export default ListAnItem
+

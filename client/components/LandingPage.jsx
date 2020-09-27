@@ -16,7 +16,7 @@ const LandingPage = () => {
         </div>
 
         <div className='landingBtns'>
-          <Link className="button browseBtn">Browse</Link>
+          <Link className="button browseBtn" to='/Home'>Browse</Link>
           <Link className="button primaryBtn" to='/register'>Register</Link>
         </div>
       </div>
