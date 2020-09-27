@@ -26,7 +26,7 @@ function SignIn (props) {
       .then(() => {
         if (isAuthenticated()) {
           updateUserContext(setUser)
-          return props.history.push('/giveMe')
+          return props.history.push('/Home')
         }
         return null
       })

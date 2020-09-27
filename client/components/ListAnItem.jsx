@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
 
-function ListAnItem () {
+function ListAnItem (props) {
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState('')
@@ -15,6 +15,7 @@ function ListAnItem () {
     e.preventDefault()
     // addItem(name, category, photo, description, location)
     addItem(item)
+    return props.history.push('/ItemDetails')
   }
 
   return (
