@@ -5,7 +5,7 @@ import { UserContext, updateUserContext } from './UserContext'
 
 import Nav from './Nav'
 import CategoriesMenu from './CategoriesMenu'
-
+import GalleryImage from './GalleryImage'
 function Home () {
   const [, setUser] = useContext(UserContext)
 
@@ -20,6 +20,11 @@ function Home () {
       <Nav/>
       <div>
         <CategoriesMenu/>
+      </div>
+      <div>
+        <p>
+          <GalleryImage/>
+        </p>
       </div>
     </div>
   )
