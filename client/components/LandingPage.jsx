@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   return (
-    // <div className="gradient-background">
     <div className="landing-wrapper">
       <div className="landingLogo">
         <img className="is-rounded1" src='./img/logo-txt-white.png' />
@@ -19,7 +18,6 @@ const LandingPage = () => {
         <Link className="button primaryBtn" to='/register'>Register</Link>
       </div>
     </div>
-    // </div>
   )
 }
 
