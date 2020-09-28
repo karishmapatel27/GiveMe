@@ -4,7 +4,7 @@ import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
 
 import Nav from './Nav'
-import CategoriesMenu from './CategoriesMenu'
+// import CategoriesMenu from './CategoriesMenu'
 import GalleryImage from './GalleryImage'
 function Home () {
   const [, setUser] = useContext(UserContext)
@@ -20,18 +20,15 @@ function Home () {
       <div className='container'>
         <h1>Home</h1>
         <Nav/>
-        <CategoriesMenu/>
+
+        {/* <CategoriesMenu/> */}
         <div className='columns'>
           {/* <label className="label ">Search</label> */}
           {/* <input className="input" id="searchbar" name="searchbar" placeholder="Search" type="text" /> */}
           <Link className="" to="/ListAnItem">Add Item</Link>
           <Link to="/ItemDetails">Item Details</Link>
         </div>
-      </div>
-      <div>
-        <p>
-          <GalleryImage/>
-        </p>
+        <GalleryImage/>
       </div>
     </>
 
