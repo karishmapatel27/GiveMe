@@ -4,14 +4,14 @@ import { getItems } from '../apiClient'
 
 import Item from './Item'
 
-export default function BrowseListings () {
+export default function BrowseListings() {
   const [items, setItems] = useState({
     items: []
   })
   useEffect(() => {
     getItems()
       .then((res) => {
-        setItems(res)
+        return setItems(res)
       })
       .catch((error) => {
         console.log('error: ', error.message)
@@ -20,17 +20,11 @@ export default function BrowseListings () {
   return (
     <>
       <div className="itemDisplay">
-        <div className="displayTitle">
-          <hr />
-          <h2>Browse Listings</h2>
-          <hr />
-        </div>
-
         <ul className="imageGridContainer" >
           {items.items.map((item) => {
             return <li className="imageGridItem" key={item.id}>
-              <Item key={item.id} item={item}/></li>
-          }) }
+              <Item key={item.id} item={item} /></li>
+          })}
         </ul>
       </div>
     </>
