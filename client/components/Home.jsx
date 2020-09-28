@@ -17,14 +17,14 @@ function Home () {
   }, [])
 
   return (
-    <>
+    <div className='container-footer'>
       <Nav/>
       <div className='columns'>
         <Link to="/ItemDetails">Item Details</Link>
       </div>
       <GalleryImage/>
       <Footer />
-    </>
+    </div>
   )
 }
 

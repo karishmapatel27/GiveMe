@@ -4,7 +4,7 @@ import { getItems } from '../apiClient'
 
 import Item from './Item'
 
-export default function Items () {
+export default function BrowseListings () {
   const [items, setItems] = useState({
     items: []
   })
@@ -30,6 +30,12 @@ export default function Items () {
             <Item key={item.id} item={item} />
           ))}
         </div>
+        <ul className="imageGridContainer" >
+      {items.items.map(({ photo, name }) => {
+        return <li className="imageGridItem" key={photo}>
+          <img src={photo} name={name}/></li>
+      }) }
+    </ul>
       </div>
     </>
   )

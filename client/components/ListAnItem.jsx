@@ -4,7 +4,6 @@ import { addItem } from '../apiClient'
 import Nav from './Nav'
 
 function ListAnItem (props) {
-
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState('')
@@ -20,7 +19,7 @@ function ListAnItem (props) {
 
   return (
     <>
-    <Nav/>
+      <Nav/>
       <div className="itemForm">
 
         <div className='imgContainer'>
@@ -48,5 +47,4 @@ function ListAnItem (props) {
     </>
   )
 }
-
 export default ListAnItem
