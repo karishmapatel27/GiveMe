@@ -4,8 +4,8 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 export default function ItemDetails (props) {
-  const [items, setItem] = useState({
-    items: {}
+  const [item, setItem] = useState({
+    item: {}
   })
   useEffect(() => {
     getItem(props.match.params.id)
@@ -16,39 +16,37 @@ export default function ItemDetails (props) {
         console.log('error: ', error.message)
       })
   }, [])
-  console.log(items)
+  console.log(item.name)
   return (
     <div className='container-footer'>
       <Nav/>
       <div className="form">
         <div className='itemName'>
           <h2>
-            <strong>{items.name}</strong>
+            <strong>{item.name}</strong>
           </h2>
         </div>
 
         <div className='itemDisplay'>
           <br></br>
           <img
-            src={items.photo}
+            src={item.photo}
             style={{ width: '200px', height: '200px' }}
             alt=''
           />
           <br></br>
           <p>
-            <strong>Category: </strong>
+            <strong>Category: {item.category} </strong>
           </p>
           <p>
-            <strong>Description:</strong>
+            <strong>Description: {item.description} </strong>
           </p>
-          <p>{items.description}</p>
+
           <br></br>
-          <p>{items.category}</p>
           <br></br>
           <p>
-            <strong>Location: </strong>
+            <strong>Location: {item.location} </strong>
           </p>
-          <p>{items.location}</p>
 
         </div>
       </div>
