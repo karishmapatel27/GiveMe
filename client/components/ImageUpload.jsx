@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 require('regenerator-runtime/runtime')
 
-function ImageUpload () {
+function ImageUpload (props) {
   const [photo, setImage] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -21,6 +21,7 @@ function ImageUpload () {
     const file = await res.json()
 
     setImage(file.secure_url)
+    props.onChange(file.secure_url)
     setLoading(false)
   }
 

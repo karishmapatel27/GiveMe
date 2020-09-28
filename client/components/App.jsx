@@ -5,10 +5,9 @@ import Register from './Register'
 import SignIn from './SignIn'
 import Home from './Home'
 import ListAnItem from './ListAnItem'
-import BrowseListings from './BrowseListings'
+import Items from './Items'
 import SearchBar from './SearchBar'
 import ItemDetails from './ItemDetails'
-
 
 function App () {
   return (
@@ -17,13 +16,12 @@ function App () {
       </div>
       <div>
         <Route exact path='/' component={LandingPage} />
-        <Route exact path='/Home' component={Home} />
-        <Route exact path='/ListAnItem' component={ListAnItem} />
-        <Route exact path='/BrowseListings' component={BrowseListings} />
-        <Route exact path='/SearchBar' component={SearchBar} />
-        <Route exact path='/SearchBar' component={ItemDetails} />
-
-        <Route exact path='/register' component={Register} />
+        <Route path='/Home' component={Home} />
+        <Route path='/ListAnItem' component={ListAnItem} />
+        <Route path='/Listings' component={Items} />
+        <Route path='/SearchBar' component={SearchBar} />
+        <Route path='/register' component={Register} />
+        <Route path='/itemdetails' component={ItemDetails} />
 
         <Route path='/signin' component={SignIn} />
       </div>

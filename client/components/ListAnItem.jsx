@@ -9,12 +9,10 @@ function ListAnItem (props) {
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
 
-  const item = { name, category, photo, description, location }
-
   function handleSubmit (e) {
     e.preventDefault()
-    // addItem(name, category, photo, description, location)
-    addItem(item)
+    addItem({ name, category, photo, description, location })
+
     return props.history.push('/ItemDetails')
   }
 
@@ -37,7 +35,7 @@ function ListAnItem (props) {
               name="category"
               value={category} onChange={event => setCategory(event.target.value)}/>
 
-            <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)}/>
+            <ImageUpload onChange={url => setPhoto(url)}/>
 
             <h5>Item Description</h5>
             <textarea className="textarea is-normal"
@@ -59,4 +57,3 @@ function ListAnItem (props) {
 }
 
 export default ListAnItem
-

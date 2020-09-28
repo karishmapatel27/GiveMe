@@ -8,12 +8,12 @@ const utils = require('../db/utils')
 
 router.get('/', (req, res) => {
   items.getItems()
-    .then(result => {
-      const returnedPosts = utils.mapResult(result)
-      res.json(returnedPosts)
-      return (null)
+    .then((items) => {
+      return res.json({ items })
     })
-    .catch(() => null)
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
 })
 router.post('/', (req, res) => {
   const newItem = {
