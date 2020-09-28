@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="form"
+>
+  <div
+    className="formLeft"
+  >
+    <img
+      className="logoImg"
+      src="./img/logo-txt-orange.png"
+    />
+  </div>
+  <div
+    className="formRight"
+  >
+    <h1>
+      Register
+    </h1>
+    <input
+      className="formInput"
+      onChange={[Function]}
+      placeholder="Email"
+      type="email"
+    />
+    <input
+      className="formInput"
+      onChange={[Function]}
+      placeholder="Username"
+      type="username"
+      value=""
+    />
+    <input
+      className="formInput"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <button
+      className="button primaryBtn"
+      data-testid="submitButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Register
+    </button>
+    <a
+      className=""
+      href="#/signin"
+      onClick={[Function]}
+    >
+      Sign In
+    </a>
+  </div>
+</div>
+`;
