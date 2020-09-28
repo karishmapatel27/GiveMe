@@ -4,11 +4,11 @@ import { UserContext, updateUserContext } from './UserContext'
 import { Link } from 'react-router-dom'
 
 import Nav from './Nav'
-// import CategoriesMenu from './CategoriesMenu'
 import GalleryImage from './GalleryImage'
 import Footer from './Footer'
+
 function Home () {
-  const [, setUser] = useContext(UserContext)
+  const [setUser] = useContext(UserContext)
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -19,6 +19,7 @@ function Home () {
   return (
     <>
       <Nav/>
+
       <div className='columns'>
         <Link to="/ItemDetails">Item Details</Link>
       </div>
@@ -27,5 +28,4 @@ function Home () {
     </>
   )
 }
-
 export default Home

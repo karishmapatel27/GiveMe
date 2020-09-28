@@ -1,0 +1,14 @@
+import React from 'react'
+
+import renderer from 'react-test-renderer'
+
+import GalleryImage from './GalleryImage'
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(
+      <GalleryImage/>
+    )
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})

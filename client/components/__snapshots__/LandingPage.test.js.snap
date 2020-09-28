@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="landing-wrapper"
+>
+  <div
+    className="landingLogo"
+  >
+    <img
+      className="logoImg"
+      src="./img/logo-txt-white.png"
+    />
+  </div>
+  <div
+    className="landing-text"
+  >
+    <p>
+      GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis, empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.
+    </p>
+  </div>
+  <div
+    className="landingBtnsContainer"
+  >
+    <a
+      className="button browseBtn"
+      href="#/home"
+      onClick={[Function]}
+    >
+      Browse
+    </a>
+    <a
+      className="button primaryBtn"
+      href="#/register"
+      onClick={[Function]}
+    >
+      Register
+    </a>
+  </div>
+</div>
+`;
