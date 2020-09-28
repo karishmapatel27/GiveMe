@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
 import Nav from './Nav'
+import Footer from './Footer'
 
 function ListAnItem (props) {
   const [name, setName] = useState('')
@@ -18,7 +19,7 @@ function ListAnItem (props) {
   }
 
   return (
-    <>
+    <div className='container-footer'>
       <Nav/>
       <div className="itemForm">
 
@@ -44,7 +45,8 @@ function ListAnItem (props) {
           </form>
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   )
 }
 export default ListAnItem
