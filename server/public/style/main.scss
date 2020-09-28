@@ -290,9 +290,25 @@ display: grid;
  // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
 }
 
+/* Footer */
+footer {
+  display: flex;
 
+  background: var(--light);
+  color: var(--dark);
+  // text-align: center;
 
+}
 
+.footer
+{
+  margin-top: 1rem;
+  padding: 1.5rem;
+  position:fixed;
+  bottom: 0;
+  left:0;
+  width:100%;
+}
 
 @media only screen and (max-width: 768px) {
   
