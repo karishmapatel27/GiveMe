@@ -17,7 +17,7 @@ function Home () {
   }, [])
 
   return (
-    <>
+    <div className='container-footer'>
       <Nav/>
 
       <div className='columns'>
@@ -25,7 +25,7 @@ function Home () {
       </div>
       <GalleryImage/>
       <Footer />
-    </>
+    </div>
   )
 }
 export default Home

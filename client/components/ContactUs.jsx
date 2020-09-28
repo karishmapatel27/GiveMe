@@ -17,7 +17,7 @@ function ContactUs () {
   }
 
   return (
-    <>
+    <div className='container-footer'>
       <Nav/>
       <div className="form">
         <div className="formLeft">
@@ -41,7 +41,7 @@ function ContactUs () {
 
       </div>
       <Footer/>
-    </>
+    </div>
   )
 }
 
