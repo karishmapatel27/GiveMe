@@ -1,5 +1,7 @@
 import emailjs from 'emailjs-com'
 import React from 'react'
+import Nav from './Nav'
+import Footer from './Footer'
 
 function ContactUs () {
   function sendEmail (e) {
@@ -16,6 +18,7 @@ function ContactUs () {
 
   return (
     <>
+      <Nav/>
       <div className="form">
         <div className="formLeft">
           <img src="./img/logo-txt-orange.png" alt="logo" className="logoImg"/>
@@ -37,6 +40,7 @@ function ContactUs () {
         </div>
 
       </div>
+      <Footer/>
     </>
   )
 }

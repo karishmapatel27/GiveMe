@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
+import Nav from './Nav'
 
 function ListAnItem() {
   const [name, setName] = useState('')
@@ -19,6 +20,7 @@ function ListAnItem() {
 
   return (
     <>
+    <Nav/>
       <div className="itemForm">
 
         <div className='imgContainer'>

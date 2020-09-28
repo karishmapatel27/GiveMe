@@ -18,13 +18,11 @@ function Home () {
 
   return (
     <>
-        <Nav/>
-        <div className='columns'>
-          <Link className="" to="/ListAnItem">Add Item</Link>
-          <Link to="/ItemDetails">Item Details</Link>
-        </div>
-        <GalleryImage/>
+      <Nav/>
+      <div className='columns'>
+        <Link to="/ItemDetails">Item Details</Link>
       </div>
+      <GalleryImage/>
       <Footer />
     </>
   )

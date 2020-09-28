@@ -12,11 +12,13 @@ import ItemDetails from './ItemDetails'
 import SearchBar from './SearchBar'
 import ContactUs from './ContactUs'
 
-function App () {
+function App() {
   return (
     <>
 
       <Route exact path='/' component={LandingPage} />
+      <Route exact path='/About' component={LandingPage}/>
+
       <Route exact path='/Home' component={Home} />
       <Route exact path='/ListAnItem' component={ListAnItem} />
       <Route exact path='/BrowseListings' component={BrowseListings} />
@@ -26,7 +28,7 @@ function App () {
       <Route exact path='/SearchBar' component={SearchBar} />
       <Route exact path='/ContactUs' component={ContactUs} />
 
-      <Route path='/signin' component={SignIn} />
+      <Route path='/SignIn' component={SignIn} />
     </>
   )
 }
