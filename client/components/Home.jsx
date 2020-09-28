@@ -2,11 +2,11 @@ import React, { useEffect, useContext } from 'react'
 import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
 import { Link } from 'react-router-dom'
-
 import Nav from './Nav'
-//import GalleryImage from './GalleryImage'
 import BrowseListing from './BrowseListings'
 import Footer from './Footer'
+
+//import GalleryImage from './GalleryImage'
 
 function Home() {
   const [setUser] = useContext(UserContext)
@@ -19,8 +19,8 @@ function Home() {
 
   return (
     <div className='container-footer'>
-      <Nav />
 
+      <Nav />
       <div className='columns'>
         <Link to="/ItemDetails">Item Details</Link>
       </div>

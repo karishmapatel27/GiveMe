@@ -19,7 +19,7 @@ export default function BrowseListings() {
   }, [])
   return (
     <>
-      <div className="itemDisplay">
+      <div>
         <ul className="imageGridContainer" >
           {items.items.map((item) => {
             return <li className="imageGridItem" key={item.id}>
