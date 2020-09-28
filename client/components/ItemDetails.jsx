@@ -14,6 +14,7 @@ export default function ItemDetails (props) {
         console.log('error: ', error.message)
       })
   }, [])
+  console.log(items)
   return (
     <>
       <div className='itemName'>
