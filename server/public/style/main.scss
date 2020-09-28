@@ -33,7 +33,7 @@
 html {
 //   background: rgb(121,9,74);
 //   background: $gradient;
-  // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+  background: linear-gradient(47deg, rgba(121,9,74,1), rgba(161,33,62,1), rgba(255,129,87,1), rgb(255, 145, 0));
 //   animation: gradient 15s ease infinite;
 //   min-height: 100%;
 //   background-repeat: no-repeat;
@@ -43,7 +43,7 @@ html {
 }
 
 html {
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	// background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
