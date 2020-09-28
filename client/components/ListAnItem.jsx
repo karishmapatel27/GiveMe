@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
+import Nav from './Nav'
 
 function ListAnItem (props) {
+
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState('')
@@ -18,37 +20,28 @@ function ListAnItem (props) {
 
   return (
     <>
-      <div className="list-item-form columns is-8">
-        <div className="column">
-          <h1>List new item</h1>
-          <form onSubmit={ handleSubmit }>
-            <h5>Item Name</h5>
+    <Nav/>
+      <div className="itemForm">
 
-            <input className="input is-normal" type="text"
-              placeholder="Item Name"
-              name="name"
-              value={name} onChange={event => setName(event.target.value)}/>
+        <div className='imgContainer'>
+          <img className="cityImg" src='./img/city.png'></img>
+        </div>
 
-            <h5>Category</h5>
-            <input className="input is-normal" type="text"
-              placeholder="Item Category"
-              name="category"
-              value={category} onChange={event => setCategory(event.target.value)}/>
+        <div className="formRight">
+          <h1>List a new item</h1>
+          <form onSubmit={handleSubmit}>
+
+            <input className="formInput" type="text" name="name" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}/>
+
+            <input className="formInput" type="text" name="category" placeholder="Category" value={category} onChange={event => setCategory(event.target.value)}/>
 
             <ImageUpload onChange={url => setPhoto(url)}/>
 
-            <h5>Item Description</h5>
-            <textarea className="textarea is-normal"
-              placeholder="Item Description"
-              name="description"
-              value={description} onChange={event => setDescription(event.target.value)}/>
+            <textarea className="textarea" placeholder="Item Description" name="description" value={description} onChange={event => setDescription(event.target.value)} />
 
-            <h5>Location</h5>
-            <input className="input is-normal" type="text"
-              placeholder="location"
-              name="location"
-              value={location} onChange={event => setLocation(event.target.value)}/>
-            <button className="button my-4 is-primary">Add Item</button>
+            <input className="formInput" type="text" placeholder="Location" name="location" value={location} onChange={event => setLocation(event.target.value)}/>
+
+            <button className="button primaryBtn">Add Item</button>
           </form>
         </div>
       </div>

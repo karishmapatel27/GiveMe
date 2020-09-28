@@ -33,26 +33,19 @@ function SignIn (props) {
   }
 
   return (
-    <div className="gradient-background">
-      <div className="wrapper">
-        <div className="form">
-          <div className='formLogo'>
-            <img className="is-rounded" src='./img/logo-orange.png' />
-          </div>
-          <div className="formRight">
-            <div className="signInTitle">
-              <h1>Sign in</h1>
-            </div>
-
-            <label className="label ">Username</label>
-            <input className="input1" id="username" name="username" value={form.username} onChange={handleChange} type="text"/>
-            <label className="label">Password</label>
-            <input className="input1" id="password" name="password" value={form.password} onChange={handleChange} type="password"/>
-            <button className="button primaryBtn" data-testid="submit-button" onClick={handleClick}>Sign in</button>
-            <Link className="" onClick={handleClick} to="/register">Register</Link>
-
-          </div>
+    <div className="form">
+      <div className='formLeft'>
+        <img className="logoImg" src='./img/logo-txt-orange.png' />
+      </div>
+      <div className="formRight">
+        <div className="signInTitle">
+          <h1>Sign in</h1>
         </div>
+        <input className="formInput" placeholder="Username" id="username" name="username" value={form.username} onChange={handleChange} type="text"/>
+        <input className="formInput" placeholder="Password" id="password" name="password" value={form.password} onChange={handleChange} type="password"/>
+
+        <button className="button primaryBtn" data-testid="submit-button" onClick={handleClick}>Sign in</button>
+        <Link className="" onClick={handleClick} to="/register">Register</Link>
       </div>
     </div>
   )

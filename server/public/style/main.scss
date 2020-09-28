@@ -12,15 +12,17 @@
 
 @import "partials/layout";
 
-// html, body, #landingBody {
-//   height: 100%;
-//   margin: 0;
+// .gradient-background {
 //   background: rgb(121,9,74);
+//   background: $gradient;
 //   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+//   height: 100%;
+//   background-size: cover;
+//   height: 100vh;
+//   width: 100%;
 // }
 
-// CARD STYLING
-
+// Base / Global Styles
 :root {
   --primary: #ddd;
   --dark: #201f1f;
@@ -28,14 +30,117 @@
   --shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.gradient-background {
+html {
   background: rgb(121,9,74);
   background: $gradient;
   background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-  height: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logoImg {
+  width: 200px;
+  height: auto;
+ }
+
+.primaryBtn {
+  color: white;
+  background-color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(255, 108, 23);
+  margin-top: 6%;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.primaryBtn:hover {
+  color: white;
+  background-color: rgb(253, 137, 69);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(253, 137, 69);
+}
+
+.primaryBtn:focus {
+  color: white;
+  background-color: rgb(253, 137, 69);
+  border: solid;
+  border-width: 1px;
+  border-color: rgb(253, 137, 69);
+  font-weight: bold;
+}
+
+// Navbar Styles
+.categoriesMenu{
+  margin-left: 1110px;
+  margin-top: 15px;
+}
+
+.navLinks{
+  display: flex;
+  align-items: right;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.link{
+  padding-left: 20px;
+}
+
+.alingElementNav{
+  display: flex;
   width: 100%;
+  align-items: center;
+  background-color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-logo{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  width: 50px;
+  height: auto;
+ }
+
+.alingSearchBar {
+  display: flex;
+  align-items: left;
+  margin-left: 3%;
+  width: 35%;
+}
+
+.alingSearchBar .primaryBtn {
+  margin: 0 10px 0 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.searchBar {
+ width: 100%;
+ // color: rgb(255, 108, 23);
+ // background-color: lightgray;
+ // background: rgb(121,9,74);
+ // background: $gradient;
+ // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
+}
+
+// Landing Page Styles
+.landing-wrapper {
+  padding: 10%
+}
+
+.landingLogo {
+  margin-bottom: 5%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
 }
 
 .landing-text {
@@ -43,55 +148,10 @@
   margin-right: 20%;
 }
 
-.landing-wrapper {
-  padding: 10%
-}
-
-.wrapper {
-  padding: 8%
-}
-
-
-.is-rounded{
-  width: 200px;
-  height: auto;
- }
-
-.input1 {
-  border-left-color: white;
-  border-top-color: white;
-  border-right-color: white;
-  border-bottom-style: groove;
-  background-color: transparent;
-  border-bottom-width: 1.5px;
-  border-top-style: hidden;
-  border-left-style: hidden;
-  width: 100%;
-  
- }
-
-a {
-  color: rgb(255, 108, 23);
-  text-align: center;
-  display: grid;
-}
- 
-.form .is-rounded {
- width: 200px;
- height: auto;
- margin-bottom: -100px;
-}
-
-.landingLogo{
+.landingBtnsContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-}
-
-.logoTitle
-{
- color: white;
- font-size: 7vw;
+  
 }
 
 .browseBtn {
@@ -102,7 +162,7 @@ a {
   border-color: white;
   margin-top: 6%;
   margin-right: 3%;
-  padding: 25px 60px;
+  padding: 10px 30px;
   border-radius: 30px;
   font-weight: bold;
 }
@@ -114,78 +174,140 @@ a {
   border-width: 1px;
   border-color: rgb(255, 108, 23);
   margin-top: 6%;
-  padding: 25px 60px;
+  padding: 10px 30px;
   border-radius: 30px;
   font-weight: bold;
 }
 
-.primaryBtn{
-  color: white;
-  background-color: rgb(255, 108, 23);
-  border: solid;
-  border-width: 1px;
-  border-color: rgb(255, 108, 23);
-  margin-top: 6%;
-  padding: 25px 60px;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-.primaryBtn:hover{
-  color: white;
-  background-color: rgb(253, 137, 69);
-  border: solid;
-  border-width: 1px;
-  border-color: rgb(253, 137, 69);
-  margin-top: 6%;
-  padding: 25px 60px;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-.formRight .label{
-  padding-top: 30px;
-}
-
-.formRight .primaryBtn{
-  margin: 50px 20px 0px;
-  align-content: center;
-  display: flex;
-}
-
-.landingLogo {
-  margin-bottom: 5%;
-  display: grid;
-  justify-content: center;
-  text-align: center;
-
-}
-
-.formLogo {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  padding: 5%;
-  margin-top: 30px;
-}
-
-.landingBtns {
-  display: flex;
-  justify-content: center;
-  
-}
-
+// Form Styles / Register and Login forms
 .form {
+  display: grid;
   background-color: white;
   box-shadow: var(--shadow);
-  display: grid;
-  gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  padding: 5rem;
-  margin: 0rem 20rem;
+  padding: 3rem;
+  margin: 10rem 25rem;
   border-radius: 25px;
 }
 
+.formRight {
+  display: grid;
+  padding: 5%;
+  min-width: 60%;
+}
+
+.formLeft {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.formInput {
+ border-left-color: white;
+ border-top-color: white;
+ border-right-color: white;
+ border-bottom-style: groove;
+ background-color: transparent;
+ border-bottom-width: 1.5px;
+ border-top-style: hidden;
+ border-left-style: hidden;
+ width: 100%;
+ margin-top: 4%;
+ margin-bottom: 4%;
+}
+
+.formRight .primaryBtn {
+  margin: 50px 20px 0px;
+  align-content: center;
+  display: grid;
+}
+
+// Other Form Styles / Add Item Listing and Listed Item Details
+.itemForm {
+  background-color: white;
+  box-shadow: var(--shadow);
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5% 10%;
+  border-radius: 25px;
+  max-width: 90rem;
+  max-height: 80vh;
+}
+
+.cityImg {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  height: 80vh;
+  max-width: 100%;
+  min-width: 80%;
+}
+
+.textarea {
+  border-width: 1.5px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+//----------- ItemDetails----------------//
+.itemDetails {
+  background-color: white;
+  box-shadow: var(--shadow);
+  display: flex;
+  margin: 5% 10%;
+  border-radius: 25px;
+  padding: 5%;
+  flex-direction: column;
+}
+
+.itemImg {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 5%;
+ margin-bottom: 5%;
+}
+
+.description {
+display: flex;
+flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+align-items: center;
+
+}
+
+.btnContainer {
+display: flex;
+width: 100%;
+align-items: center;
+justify-content: center;
+}
+
+.btnContainer .primaryBtn {
+margin: 50px 20px 0px 20px;
+align-content: center;
+display: grid;
+}
+
+/* Footer */
+footer {
+  display: flex;
+
+  background: var(--light);
+  color: var(--dark);
+  // text-align: center;
+
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  position:relative;
+  bottom: 0;
+  left:0;
+  width:100%;
+}
 
 @media only screen and (max-width: 768px) {
   

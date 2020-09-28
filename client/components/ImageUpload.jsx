@@ -27,12 +27,7 @@ function ImageUpload (props) {
 
   return (
     <div className='ImageUpload'>
-      <h5>Upload Image</h5>
-      <input type='file'
-        name='file'
-        placeholder='Upload an Image'
-        onChange={uploadImage}
-      />
+      <input type='file' name='file' placeholder='Upload an Image' onChange={uploadImage}/>
       {loading ? (
         <h6>Loading...</h6>
       ) : (
