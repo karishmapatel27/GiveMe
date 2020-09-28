@@ -14,6 +14,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $weight-bold;
 }
 
+a {
+  color: rgb(255, 108, 23);
+  text-align: center;
+  display: grid;
+}
+
+a:hover {
+  color: rgb(253, 137, 69);
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -79,12 +89,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .alingSearchBar .primaryBtn {
   font-weight: $weight-bold;
+  margin: 0;
   font-size: 0.8rem;
 }
 
 .alingSearchBar .primaryBtn:hover {
   font-weight: $weight-bold;
   font-size: 0.8rem;
+}
+
+
+.navLinks a {
+  color: rgb(63, 62, 62);
+  margin-top: 0px;
+  // padding: 0%;
+  font-size: 1.2rem;
+}
+
+.navLinks .highlight {
+  color: rgb(255, 108, 23);
+  
 }
 
 .form h1{

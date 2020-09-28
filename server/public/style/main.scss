@@ -41,16 +41,6 @@ html {
   padding: 0;
 }
 
-a {
-  color: rgb(255, 108, 23);
-  text-align: center;
-  display: grid;
-}
-
-a:hover {
-  color: rgb(253, 137, 69);
-}
-
 .logoImg {
   width: 200px;
   height: auto;
@@ -83,6 +73,62 @@ a:hover {
   border-width: 1px;
   border-color: rgb(253, 137, 69);
   font-weight: bold;
+}
+
+// Navbar Styles
+.categoriesMenu{
+  margin-left: 1110px;
+  margin-top: 15px;
+}
+
+.navLinks{
+  display: flex;
+  align-items: right;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.link{
+  padding-left: 20px;
+}
+
+.alingElementNav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-logo{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  width: 50px;
+  height: auto;
+ }
+
+.alingSearchBar {
+  display: flex;
+  align-items: left;
+  margin-left: 3%;
+  width: 35%;
+}
+
+.alingSearchBar .primaryBtn {
+  margin: 0 10px 0 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.searchBar {
+ width: 100%;
+ // color: rgb(255, 108, 23);
+ // background-color: lightgray;
+ // background: rgb(121,9,74);
+ // background: $gradient;
+ // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
 }
 
 // Landing Page Styles
@@ -244,52 +290,6 @@ align-content: center;
 display: grid;
 }
 
-// Home Page Styles
-.categoriesMenu{
-  margin-left: 1110px;
-  margin-top: 15px;
-}
-
-.alingElementNav{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  background-color: white;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.nav-logo{
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-bottom: 0.4rem;
-  width: 50px;
-  height: auto;
- }
-
-.alingSearchBar {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
-
-.alingSearchBar .primaryBtn {
-  margin: 0 20px 0 20px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.searchBar {
- width: 80%;
- // color: rgb(255, 108, 23);
- // background-color: lightgray;
- // background: rgb(121,9,74);
- // background: $gradient;
- // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-}
-
 /* Footer */
 footer {
   display: flex;
@@ -300,11 +300,10 @@ footer {
 
 }
 
-.footer
-{
+.footer {
   margin-top: 1rem;
   padding: 1.5rem;
-  position:fixed;
+  position:relative;
   bottom: 0;
   left:0;
   width:100%;

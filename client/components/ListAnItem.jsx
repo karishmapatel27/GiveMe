@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 import ImageUpload from './ImageUpload'
 import { addItem } from '../apiClient'
+import Nav from './Nav'
 
-function ListAnItem() {
+function ListAnItem (props) {
+
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState('')
   const [description, setDescription] = useState('')
   const [location, setLocation] = useState('')
 
-  const item = { name, category, photo, description, location }
-
-  function handleSubmit(e) {
+  function handleSubmit (e) {
     e.preventDefault()
-    // addItem(name, category, photo, description, location)
-    addItem(item)
+    addItem({ name, category, photo, description, location })
+
+    return props.history.push('/ItemDetails')
   }
 
   return (
     <>
+    <Nav/>
       <div className="itemForm">
 
         <div className='imgContainer'>
@@ -33,7 +35,7 @@ function ListAnItem() {
 
             <input className="formInput" type="text" name="category" placeholder="Category" value={category} onChange={event => setCategory(event.target.value)}/>
 
-            <ImageUpload value={photo} onChange={event => setPhoto(event.target.value)} />
+            <ImageUpload onChange={url => setPhoto(url)}/>
 
             <textarea className="textarea" placeholder="Item Description" name="description" value={description} onChange={event => setDescription(event.target.value)} />
 

@@ -2,19 +2,18 @@ import request from 'superagent'
 
 const rootUrl = '/api/v1'
 
-export function getGiveMe () {
-  return request.get(rootUrl + '/giveMe')
-    .then(res => {
-      return res.body.items
-    })
+export function getItems () {
+  return request.get(rootUrl + '/giveMe').then((res) => {
+    console.log(res)
+    return res.body
+  })
 }
 
-export function getItems () {
-  return request.get(rootUrl + '/giveMe')
-    .then(res => {
-      return res.body
-    })
-    .catch(errorHandler('GET', rootUrl + '/giveMe'))
+export function getItem (itemId) {
+  return request.get(rootUrl + '/itemdetails/' + itemId).then((res) => {
+    console.log()
+    return res.body
+  })
 }
 
 export function addItem (item) {
