@@ -25,7 +25,7 @@ function App () {
       <Route exact path='/listings' component={BrowseListings} />
 
       <Route exact path='/register' component={Register} />
-      <Route path='/ItemDetails' component={ItemDetails} />
+      <Route exact path='/ItemDetails' component={ItemDetails} />
       <Route exact path='/SearchBar' component={SearchBar} />
       <Route exact path='/ContactUs' component={ContactUs} />
 
