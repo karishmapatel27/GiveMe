@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+
 import { getItems } from '../apiClient'
 
 import Item from './Item'
@@ -25,17 +25,13 @@ export default function BrowseListings () {
           <h2>Browse Listings</h2>
           <hr />
         </div>
-        <div className="card-flex-wrapper column is-three-quarters">
-          {items.items.map((item) => (
-            <Item key={item.id} item={item} />
-          ))}
-        </div>
+
         <ul className="imageGridContainer" >
-      {items.items.map(({ photo, name }) => {
-        return <li className="imageGridItem" key={photo}>
-          <img src={photo} name={name}/></li>
-      }) }
-    </ul>
+          {items.items.map((item) => {
+            return <li className="imageGridItem" key={item.id}>
+              <Item key={item.id} item={item}/></li>
+          }) }
+        </ul>
       </div>
     </>
   )

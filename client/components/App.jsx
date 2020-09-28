@@ -13,7 +13,7 @@ import ItemDetails from './ItemDetails'
 import SearchBar from './SearchBar'
 import ContactUs from './ContactUs'
 
-function App() {
+function App () {
   return (
     <>
 
@@ -22,7 +22,7 @@ function App() {
 
       <Route exact path='/Home' component={Home} />
       <Route exact path='/ListAnItem' component={ListAnItem} />
-      <Route exact path='/BrowseListings' component={BrowseListings} />
+      <Route exact path='/listings' component={BrowseListings} />
 
       <Route exact path='/register' component={Register} />
       <Route exact path='/ItemDetails' component={ItemDetails} />
