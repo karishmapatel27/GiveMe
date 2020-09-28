@@ -1,24 +1,52 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getItem } from '../apiClient'
 
-function ItemDetails () {
+export default function ItemDetails (props) {
+  const [items, setItem] = useState({
+    items: {}
+  })
+  useEffect(() => {
+    getItem(props.match.params.id)
+      .then((res) => {
+        setItem(res)
+      })
+      .catch((error) => {
+        console.log('error: ', error.message)
+      })
+  }, [])
   return (
     <>
-      <div className="itemDetails">
-        <h1>Leather Biker Jacket</h1>
-        <img className="itemImg"src='./img/city.png'></img>
+      <div className='itemName'>
+        <h2>
+          <strong>{items.name}</strong>
+        </h2>
+      </div>
 
-        <div className="description">
-          <p className='itemInfo'>
-            GiveMe is an online platform where kiwis can donate their unwanted items to other kiwis, empowering the NZ community to improve sustainability and reduce the waste caused by unwanted products.
-          </p>
-          <div className='btnContainer'>
-            <button className="button primaryBtn btn">Give Me</button>
-            <button className="button primaryBtn">Watch</button>
-          </div>
-        </div>
+      <div className='itemDisplay'>
+        <br></br>
+        <img
+          src={items.photo}
+          style={{ width: '200px', height: '200px' }}
+          alt=''
+        />
+        <br></br>
+
+        <p>
+          <strong>Description:</strong>
+        </p>
+        <p>{items.description}</p>
+        <br></br>
+        <p>
+          <strong>Category: </strong>
+        </p>
+        <p>{items.category}</p>
+        <br></br>
+        <p>
+          <strong>Location: </strong>
+        </p>
+        <p>{items.location}</p>
+
       </div>
     </>
   )
 }
-
-export default ItemDetails

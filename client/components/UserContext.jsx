@@ -19,4 +19,3 @@ export const updateUserContext = (setUser) => {
   const { username, isAdmin } = getDecodedToken()
   return isAuthenticated() ? setUser({ username, isAdmin }) : null
 }
-
