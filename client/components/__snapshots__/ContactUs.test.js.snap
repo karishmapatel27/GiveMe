@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="form"
+>
+  <div
+    className="formLeft"
+  >
+    <img
+      alt="logo"
+      className="logoImg"
+      src="./img/logo-txt-orange.png"
+    />
+  </div>
+  <div
+    className="formRight"
+  >
+    <h1>
+      Contact Us
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="formInput"
+        name="name"
+        placeholder="Name"
+        type="text"
+      />
+      <input
+        className="formInput"
+        name="email"
+        placeholder="Email Address"
+        type="email"
+      />
+      <input
+        className="formInput"
+        name="subject"
+        placeholder="Subject"
+        type="text"
+      />
+      <textarea
+        className="textarea"
+        cols="30"
+        id=""
+        name="message"
+        placeholder="Your message"
+        rows="8"
+      />
+      <input
+        className="button primaryBtn"
+        type="submit"
+        value="Send Message"
+      />
+    </form>
+  </div>
+</div>
+`;
