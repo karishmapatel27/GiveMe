@@ -15,6 +15,18 @@ router.get('/', (req, res) => {
       res.status(500).json({ error: err.message })
     })
 })
+
+router.get('/itemdetails/:id', (req, res) => {
+  const id = Number(req.params.id)
+  items.getItem(id)
+    .then((singleItem) => {
+      return res.json(singleItem)
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/', (req, res) => {
   const newItem = {
     name: req.body.name,
