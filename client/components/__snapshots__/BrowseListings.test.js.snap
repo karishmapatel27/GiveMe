@@ -1,24 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="container"
->
-  <div
-    className="columns"
-  >
-    <label
-      className="label "
-    >
-      Search
-    </label>
-    <input
-      className="input "
-      id="searchbar"
-      name="searchbar"
-      placeholder="Search"
-      type="text"
-    />
-  </div>
+<div>
+  <ul
+    className="imageGridContainer"
+  />
 </div>
 `;

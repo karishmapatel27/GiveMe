@@ -51,7 +51,7 @@ exports.seed = knex =>
         user_id: 4,
         name: 'Dr. Seuss 20 Books Set',
         category: 'books',
-        photo: 'https://i.ebayimg.com/images/i/351875792148-0-1/s-l1000.jpg',
+        photo: 'https://i.ebayimg.com/images/i/111121545984-0-1/s-l1000.jpg',
         description: 'Classic Case of Dr. Seuss - 20 Books Set A wonderful slipcase collection of 20 classic Dr. Seuss titles in paperback. A classic collection of twenty of Dr. Seuss’s best-loved stories – in one wonderful boxed set',
         location: 'Lower Hutt'
       },

@@ -8,7 +8,7 @@ export default function Item ({ item }) {
     <div className='product-card'>
       <div className='product-tumb'>
         <Link to={`/ItemDetails/${itemID}`}>
-          <img src={item.photo} />
+          <img src={item.photo} style={{ width: '250px', height: '250px' }}/>
         </Link>
       </div>
       <div className="product-details">

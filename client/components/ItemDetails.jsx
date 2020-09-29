@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getItem } from '../apiClient'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 export default function ItemDetails (props) {
   const [item, setItem] = useState({
@@ -26,7 +28,7 @@ export default function ItemDetails (props) {
 
             <img
               src={item.photo}
-              style={{ width: '200px', height: '200px' }}
+              style={{ width: '300px', height: '300px' }}
               alt=''
             />
           </div>
@@ -43,18 +45,23 @@ export default function ItemDetails (props) {
               Description: {item.description}
             </p>
             <br/>
-            <br/>
+
             <p>
             Location: {item.location}
             </p>
-
-            <p>
+            <br/>
+            <IfAuthenticated>
+              <p>
               Username: {item.username}
-            </p>
-
-            <p>
+              </p>
+              <p>
               Email: {item.email}
-            </p>
+              </p>
+            </IfAuthenticated>
+            <IfNotAuthenticated>
+              <Link to='/signin' className="highlight">Please register or sign in to get the contact details</Link>
+
+            </IfNotAuthenticated>
 
           </div>
         </div>
