@@ -367,11 +367,15 @@ display: grid;
 /* Footer */
 footer {
   display: flex;
-
-  background: var(--light);
-  color: var(--dark);
+  // background: var(--light);
+  // color: var(--dark);
   // text-align: center;
 
+}
+
+.footer-left {
+  display: flex;
+  // width: 80%;
 }
 
 .footer {
@@ -380,6 +384,14 @@ footer {
   position: absolute;
   bottom: 0;
   width:100%;
+}
+
+.socialMedia{
+  margin-left: auto;
+  margin-right: 0;
+  // width: 20%;
+  // justify-content: right;
+  // float: right;
 }
 
 @media only screen and (max-width: 768px) {
