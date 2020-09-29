@@ -13,10 +13,13 @@ function getItems () {
 }
 
 function getItem (id) {
+  console.log(id)
   return db('items')
     .select('id', 'name', 'category', 'photo', 'description', 'location')
     .where('id', id)
+    .first()
 }
+
 
 function addItem (itemData) {
   return db('items')
