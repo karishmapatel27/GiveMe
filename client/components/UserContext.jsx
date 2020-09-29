@@ -3,10 +3,11 @@ import { getDecodedToken, isAuthenticated } from 'authenticare/client'
 
 export const UserContext = createContext()
 
-export const UserProvider = ({ reducer, initialState, children }) => {
+export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
     username: '',
-    isAdmin: ''
+    isAdmin: '',
+    id: null
   })
 
   return (
@@ -16,6 +17,6 @@ export const UserProvider = ({ reducer, initialState, children }) => {
   )
 }
 export const updateUserContext = (setUser) => {
-  const { username, isAdmin } = getDecodedToken()
-  return isAuthenticated() ? setUser({ username, isAdmin }) : null
+  const { username, isAdmin, id } = getDecodedToken()
+  return isAuthenticated() ? setUser({ username, isAdmin, id }) : null
 }
