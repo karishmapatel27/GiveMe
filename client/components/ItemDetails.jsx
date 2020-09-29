@@ -20,34 +20,43 @@ export default function ItemDetails (props) {
   return (
     <div className='container-footer'>
       <Nav/>
-      <div className="form">
-        <div className='itemName'>
-          <h2>
-            <strong>{item.name}</strong>
-          </h2>
-        </div>
+      <div className="formDetail">
+        <div className="detail">
+          <div className='itemName'>
 
-        <div className='itemDisplay'>
-          <br></br>
-          <img
-            src={item.photo}
-            style={{ width: '200px', height: '200px' }}
-            alt=''
-          />
-          <br></br>
-          <p>
-            <strong>Category: {item.category} </strong>
-          </p>
-          <p>
-            <strong>Description: {item.description} </strong>
-          </p>
+            <img
+              src={item.photo}
+              style={{ width: '200px', height: '200px' }}
+              alt=''
+            />
+          </div>
 
-          <br></br>
-          <br></br>
-          <p>
-            <strong>Location: {item.location} </strong>
-          </p>
+          <div className='itemDisplay'>
+            <h1>
+              {item.name}
+            </h1>
+            <br/>
+            <p>
+              {/* Category: {item.category} */}
+            </p>
+            <p>
+              Description: {item.description}
+            </p>
+            <br/>
+            <br/>
+            <p>
+            Location: {item.location}
+            </p>
 
+            <p>
+              Username: {item.username}
+            </p>
+
+            <p>
+              Email: {item.email}
+            </p>
+
+          </div>
         </div>
       </div>
       <Footer/>

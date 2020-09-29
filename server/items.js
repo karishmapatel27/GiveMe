@@ -15,17 +15,28 @@ function getItems () {
 function getItem (id) {
   console.log(id)
   return db('items')
-    .select('id', 'name', 'category', 'photo', 'description', 'location')
-    .where('id', id)
+    .join('users', 'items.user_id', 'users.id')
+    .select('items.id as itemId', 'name', 'category', 'photo', 'description', 'location', 'users.username as username', 'users.email as email')
+    .where('itemId', id)
     .first()
 }
-
 
 function addItem (itemData) {
   return db('items')
     .insert(itemData)
 }
 
+// function displayContact (id) {
+//   return db('users')
+//     .join('items', 'users.id', 'items.user_id')
+//     .where('users.id', id)
+//     .select('username', 'email')
+//     .first()
+//     .then(result => ({
+//       username: result.username,
+//       email: result.email
+//     }))
+// }
 // function getItems (db = connection) {
 //   return Promise.resolve([...items])
 // }
