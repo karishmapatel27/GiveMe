@@ -3,13 +3,12 @@ import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
-import BrowseListing from './BrowseListings'
+// import CategoriesMenu from './CategoriesMenu'
+// import GalleryImage from './GalleryImage'
+import BrowseListings from './BrowseListings'
 import Footer from './Footer'
-
-//import GalleryImage from './GalleryImage'
-
 function Home() {
-  const [setUser] = useContext(UserContext)
+  const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -18,15 +17,14 @@ function Home() {
   }, [])
 
   return (
-    <div className='container-footer'>
-
-      <Nav />
-      <div className='columns'>
-        <Link to="/ItemDetails">Item Details</Link>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav />
+        <BrowseListings />
+        <Footer />
       </div>
-      <BrowseListing />
-      <Footer />
     </div>
   )
 }
+
 export default Home

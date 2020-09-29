@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { getItem } from '../apiClient'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 export default function ItemDetails (props) {
-  const [items, setItem] = useState({
-    items: {}
+  const [item, setItem] = useState({
+    item: {}
   })
   useEffect(() => {
     getItem(props.match.params.id)
@@ -16,43 +18,57 @@ export default function ItemDetails (props) {
         console.log('error: ', error.message)
       })
   }, [])
-  console.log(items)
+  // console.log(item.name)
   return (
-    <div className='container-footer'>
-      <Nav/>
-      <div className="form">
-        <div className='itemName'>
-          <h2>
-            <strong>{items.name}</strong>
-          </h2>
-        </div>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav/>
+        <div className="formDetail">
+          <div className="detail">
+            <div className='itemName'>
 
-        <div className='itemDisplay'>
-          <br></br>
-          <img
-            src={items.photo}
-            style={{ width: '200px', height: '200px' }}
-            alt=''
-          />
-          <br></br>
-          <p>
-            <strong>Category: </strong>
-          </p>
-          <p>
-            <strong>Description:</strong>
-          </p>
-          <p>{items.description}</p>
-          <br></br>
-          <p>{items.category}</p>
-          <br></br>
-          <p>
-            <strong>Location: </strong>
-          </p>
-          <p>{items.location}</p>
+              <img
+                src={item.photo}
+                style={{ width: '300px', height: '300px' }}
+                alt=''
+              />
+            </div>
 
+            <div className='itemDisplay'>
+              <h1>
+                {item.name}
+              </h1>
+              <br/>
+              <p>
+                {/* Category: {item.category} */}
+              </p>
+              <p>
+              Description: {item.description}
+              </p>
+              <br/>
+
+              <p>
+            Location: {item.location}
+              </p>
+              <br/>
+              <IfAuthenticated>
+                <p>
+              Username: {item.username}
+                </p>
+                <p>
+              Email: {item.email}
+                </p>
+              </IfAuthenticated>
+              <IfNotAuthenticated>
+                <Link to='/signin' className="highlight">Please register or sign in to get the contact details</Link>
+
+              </IfNotAuthenticated>
+
+            </div>
+          </div>
         </div>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }

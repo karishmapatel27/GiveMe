@@ -5,14 +5,18 @@ export default function Item({ item }) {
   const itemID = String(item.id)
 
   return (
-    <div className='card-flex-item card'>
-      <div className='has-text-centered mb-4'>
+    <div className='product-card'>
+      <div className='product-tumb'>
         <Link to={`/ItemDetails/${itemID}`}>
-          <img src={item.photo} />
+          <img src={item.photo} style={{ width: '250px', height: '250px' }} />
         </Link>
-        <Link to={`/ItemDetails/${itemID}`}>
-          <h4 className='has-text-centered mt-3'>{item.name}</h4>
-        </Link>
+      </div>
+      <div className="product-details">
+        <div className="product-bottom-details">
+          <Link to={`/ItemDetails/${itemID}`}>
+            <p className=''>{item.name}</p>
+          </Link>
+        </div>
       </div>
     </div>
   )

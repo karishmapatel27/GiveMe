@@ -10,7 +10,7 @@ export function getItems () {
 }
 
 export function getItem (itemId) {
-  return request.get(rootUrl + '/itemdetails/' + itemId).then((res) => {
+  return request.get(rootUrl + '/giveme/itemdetails/' + itemId).then((res) => {
     console.log()
     return res.body
   })
@@ -24,6 +24,8 @@ export function addItem (item) {
     })
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
 }
+
+
 
 // export function updateItem (item) {
 //   return request.patch(`/v1/items/${item.id}`)
