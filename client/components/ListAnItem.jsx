@@ -18,10 +18,11 @@ function ListAnItem (props) {
 
   function handleSubmit (e) {
     e.preventDefault()
-    addItem({ user, name, category, photo, description, location })
+    addItem({ userId: user.id, name, category, photo, description, location })
 
-    return props.history.push('/ItemDetails')
+    return props.history.push('/Home')
   }
+
   console.log('signed in id: ', user.id)
 
   return (
@@ -38,7 +39,7 @@ function ListAnItem (props) {
             <h1>List a new item</h1>
             <form onSubmit={handleSubmit}>
 
-              <input type="hidden" name="id" value={user.id} onChange={event => setUser(event.target.value)}/>
+              <input type="hidden" name="id" value={id} onChange={event => setUser(event.target.value)}/>
 
               <input className="formInput" type="text" name="name" placeholder="Item Name" value={name} onChange={event => setName(event.target.value)}/>
 
