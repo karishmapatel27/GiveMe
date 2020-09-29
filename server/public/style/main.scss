@@ -234,6 +234,7 @@ html {
 }
 
 // Form Styles / Register and Login forms
+
 .form {
   display: grid;
   background-color: white;
@@ -244,17 +245,18 @@ html {
   border-radius: 25px;
 }
 
-.formRight {
-  display: grid;
-  padding: 5%;
-  min-width: 60%;
-}
-
 .formLeft {
   display: grid;
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.formRight {
+  display: grid;
+  padding: 5%;
+  min-width: 60%;
+  // min-height: 50%;
 }
 
 .formInput {
@@ -286,13 +288,31 @@ html {
   margin: 5% 10%;
   border-radius: 25px;
   max-width: 90rem;
-  max-height: 80vh;
+  // max-height: 80vh;
 }
 
+.itemForm .formRight {
+  display: grid;
+  padding: 5%;
+  justify-content: right;
+  min-width: 60%;
+  // min-height: 50%;
+}
+
+// .imgContainer {
+//   background-size: cover;
+//   border-top-left-radius: 25px;
+//   border-bottom-left-radius: 25px;
+//   height: 100%;
+//   max-width: 100%;
+//   min-width: 80%;
+// }
+
 .cityImg {
+  background-size: cover;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  height: 80vh;
+  height: 100%;
   max-width: 100%;
   min-width: 80%;
 }
