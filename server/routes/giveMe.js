@@ -5,6 +5,7 @@ const items = require('../items')
 const router = express.Router()
 
 const utils = require('../db/utils')
+const { route } = require('./auth')
 
 router.get('/', (req, res) => {
   items.getItems()
@@ -45,4 +46,14 @@ router.post('/', (req, res) => {
     })
 })
 
+// router.get('/itemdetails/:id', (req, res) => {
+//   const id = Number(req.params.id)
+//   items.displayContact(id)
+//     .then((singleItem) => {
+//       return res.json(singleItem)
+//     })
+//     .catch((err) => {
+//       res.status(500).json({ error: err.message })
+//     })
+// })
 module.exports = router

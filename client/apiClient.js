@@ -25,6 +25,8 @@ export function addItem (item) {
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
 }
 
+
+
 // export function updateItem (item) {
 //   return request.patch(`/v1/items/${item.id}`)
 //     .send(item)

@@ -14,7 +14,7 @@ export default function Item ({ item }) {
       <div className="product-details">
         <div className="product-bottom-details">
           <Link to={`/ItemDetails/${itemID}`}>
-            <h4 className=''>{item.name}</h4>
+            <p className=''>{item.name}</p>
           </Link>
         </div>
       </div>
