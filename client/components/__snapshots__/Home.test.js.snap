@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="container-footer"
+>
   <div
     className="alingElementNav"
   >
@@ -32,9 +34,7 @@ Array [
               className="button primaryBtn "
               onClick={[Function]}
             >
-              <span>
-                Categories
-              </span>
+              Categories
             </button>
           </div>
           <div
@@ -49,199 +49,104 @@ Array [
                 className="dropdown-item"
                 href="#"
               >
-                Clothing
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
                 Books
               </a>
               <a
                 className="dropdown-item"
                 href="#"
               >
-                Outdoor
+                Furniture
               </a>
               <a
                 className="dropdown-item"
                 href="#"
               >
-                Eletronics
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
-                Homewear
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
-                Arts
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
-                Eletronics
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
-                Gamin
+                Toys
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>,
-  <div
-    className="columns"
-  >
-    <a
-      className=""
-      href="#/ListAnItem"
-      onClick={[Function]}
+    <div
+      className="navLinks"
     >
-      Add Item
-    </a>
-    <a
-      href="#/ItemDetails"
-      onClick={[Function]}
-    >
-      Item Details
-    </a>
-  </div>,
-  <ul
-    className="imageGridContainer"
-  >
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
-        title="Breakfast"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d"
-        title="Burger"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1522770179533-24471fcdba45"
-        title="Camera"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c"
-        title="Coffee"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1533827432537-70133748f5c8"
-        title="Hats"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62"
-        title="Honey"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6"
-        title="Basketball"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f"
-        title="Fern"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1597645587822-e99fa5d45d25"
-        title="Mushrooms"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1567306301408-9b74779a11af"
-        title="Tomato basil"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
-        title="Sea star"
-      />
-    </li>
-    <li
-      className="imageGridItem"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1589118949245-7d38baf380d6"
-        title="Bike"
-      />
-    </li>
-  </ul>,
+      <a
+        className="link"
+        href="#/signin"
+        onClick={[Function]}
+      >
+        Add Item
+      </a>
+      <a
+        className="link"
+        href="#/Home"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="link"
+        href="#/About"
+        onClick={[Function]}
+      >
+        About
+      </a>
+      <a
+        className="link"
+        href="#/ContactUs"
+        onClick={[Function]}
+      >
+        Contact Us
+      </a>
+      <a
+        className="link highlight"
+        href="#/SignIn"
+        onClick={[Function]}
+      >
+        Sign In
+      </a>
+    </div>
+  </div>
+  <div>
+    <ul
+      className="imageGridContainer"
+    />
+  </div>
   <div
     className="footer"
   >
     <footer>
-      <p>
-        © 2020 GiveMe. All rights reserved
-      </p>
-      <a
-        className="fa fa-facebook"
-        href="#"
-      />
-      <a
-        className="fa fa-twitter"
-        href="#"
-      />
-      <a
-        className="fa fa-google"
-        href="#"
-      />
-      <a
-        className="fa fa-github"
-        href="https://github.com/pohutukawa-2020/GiveMe"
-        rel="noreferrer"
-        target="_blank"
-      />
+      <div
+        className="footer-left"
+      >
+        <p>
+          © 2020 GiveMe. All rights reserved
+        </p>
+      </div>
+      <div
+        className="socialMedia"
+      >
+        <a
+          className="fa fa-facebook"
+          href="#"
+        />
+        <a
+          className="fa fa-twitter"
+          href="#"
+        />
+        <a
+          className="fa fa-google"
+          href="#"
+        />
+        <a
+          className="fa fa-github"
+          href="https://github.com/pohutukawa-2020/GiveMe"
+          rel="noreferrer"
+          target="_blank"
+        />
+      </div>
     </footer>
-  </div>,
-]
+  </div>
+</div>
 `;

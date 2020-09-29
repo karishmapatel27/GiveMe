@@ -20,9 +20,6 @@ function Home() {
   return (
     <div className='container-footer'>
       <Nav />
-      <div className='columns'>
-        <Link to="/ItemDetails">Item Details</Link>
-      </div>
       <BrowseListings />
       <Footer />
     </div>

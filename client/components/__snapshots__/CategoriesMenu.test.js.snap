@@ -14,9 +14,7 @@ exports[`renders correctly 1`] = `
         className="button primaryBtn "
         onClick={[Function]}
       >
-        <span>
-          Categories
-        </span>
+        Categories
       </button>
     </div>
     <div
@@ -31,49 +29,19 @@ exports[`renders correctly 1`] = `
           className="dropdown-item"
           href="#"
         >
-          Clothing
-        </a>
-        <a
-          className="dropdown-item"
-          href="#"
-        >
           Books
         </a>
         <a
           className="dropdown-item"
           href="#"
         >
-          Outdoor
+          Furniture
         </a>
         <a
           className="dropdown-item"
           href="#"
         >
-          Eletronics
-        </a>
-        <a
-          className="dropdown-item"
-          href="#"
-        >
-          Homewear
-        </a>
-        <a
-          className="dropdown-item"
-          href="#"
-        >
-          Arts
-        </a>
-        <a
-          className="dropdown-item"
-          href="#"
-        >
-          Eletronics
-        </a>
-        <a
-          className="dropdown-item"
-          href="#"
-        >
-          Gamin
+          Toys
         </a>
       </div>
     </div>
