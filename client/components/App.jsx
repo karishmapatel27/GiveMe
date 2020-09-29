@@ -26,6 +26,7 @@ function App () {
 
       <Route exact path='/register' component={Register} />
       <Route exact path='/ItemDetails/:id' component={ItemDetails} />
+
       <Route exact path='/SearchBar' component={SearchBar} />
       <Route exact path='/ContactUs' component={ContactUs} />
 
