@@ -8,7 +8,7 @@ import Nav from './Nav'
 // import GalleryImage from './GalleryImage'
 import BrowseListings from './BrowseListings'
 import Footer from './Footer'
-function Home() {
+function Home () {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -18,22 +18,12 @@ function Home() {
   }, [])
 
   return (
-<<<<<<< Updated upstream
-    <div className='container-footer'>
-      <Nav />
-      <BrowseListings />
-=======
-    <>
-      <div>
-        <Nav/>
-        <div className='columns'>
-          <Link className="" to="/ListAnItem">Add Item</Link>
-          <Link to="/ItemDetails">Item Details</Link>
-        </div>
-        <GalleryImage/>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav />
+        <BrowseListings />
+        <Footer />
       </div>
->>>>>>> Stashed changes
-      <Footer />
     </div>
   )
 }
