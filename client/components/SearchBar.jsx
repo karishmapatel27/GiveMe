@@ -1,23 +1,21 @@
-// import React from 'react'
-// import BrowseListings from './BrowseListings'
+import React, {useState} from 'react'
+import { withRouter } from 'react-router'
 
-// class SearchBar extends React.Component {
-//   constructor () {
-//     super()
-//     this.state = {
-//       search: ''
-//     }
-//   }
+function SearchBar (props) {
+  const [search, setSearch] = useState('')
 
-//   updateSeacrh (event) {
-//     this.setState({ search: event.target.value })
-//   }
+  function handleSubmit (e) {
+    e.preventDefault()
 
-//   render () {
-//     return (
-      
-//     )
-//   }
-// }
+    return props.history.push('/searchresults/' + search)
+  }
 
-// export default SearchBar
+  return (
+    <form onSubmit={handleSubmit}>
+      <input className='input is-rounded is-small searchBar ' id='searchbar' placeholder='Search' type='text' onChange={event => setSearch(event.target.value)} />
+      <button className="button primaryBtn">Search</button>
+    </form>
+  )
+}
+
+export default withRouter(SearchBar)

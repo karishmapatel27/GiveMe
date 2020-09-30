@@ -5,7 +5,9 @@ module.exports = {
   getItems,
   getItem,
   addItem,
-  getItemByName
+  searchItemsByName,
+  searchItemsByDescription,
+  searchItemsByCategory
 }
 
 function getItems () {
@@ -27,12 +29,23 @@ function addItem (itemData) {
     .insert(itemData)
 }
 
-function getItemByName(name) {
+function searchItemsByName (name) {
   console.log(name)
   return db('items')
     .select('id', 'name', 'category', 'photo', 'description', 'location')
-    .where('name', name)
-    .first()
+    .where('name', 'like', `%${name}%`)
+}
+
+function searchItemsByDescription (description) {
+  return db('items')
+    .select('id', 'name', 'category', 'photo', 'description', 'location')
+    .where('description', 'like', `%${description}%`)
+}
+
+function searchItemsByCategory (category) {
+  return db('items')
+    .select('id', 'name', 'category', 'photo', 'description', 'location')
+    .where('category', 'like', `%${category}%`)
 }
 // function displayContact (id) {
 //   return db('users')

@@ -25,9 +25,9 @@ export function addItem (item) {
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
 }
 
-export function getItembyName (itemName) {
-  return request.get(rootUrl + '/giveme/browselistings/' + itemName).then((res) => {
-    console.log()
+
+export function getItemsbySearch (searchinput) {
+  return request.get(rootUrl + '/giveme/searchresults/' + searchinput).then((res) => {
     return res.body
   })
 }

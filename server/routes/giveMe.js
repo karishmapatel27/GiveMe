@@ -5,7 +5,6 @@ const items = require('../items')
 const router = express.Router()
 
 const utils = require('../db/utils')
-const { route } = require('./auth')
 
 router.get('/', (req, res) => {
   items.getItems()
@@ -28,11 +27,17 @@ router.get('/itemdetails/:id', (req, res) => {
     })
 })
 
-router.get('/browselistings/:name', (req, res) => {
-  const name = String(req.params.name)
-  items.getItemByName(name)
-    .then((relevantItems) => {
-      return res.json(relevantItems)
+router.get('/searchresults/:searchinput', (req, res) => {
+  const searchinput = (req.params.searchinput)
+  Promise.all([items.searchItemsByName(searchinput), items.searchItemsByDescription(searchinput), items.searchItemsByCategory(searchinput)])
+    .then((searchResults) => {
+      const ids = new Set()
+      const results = searchResults.flat().filter(result => {
+        const keep = !ids.has(result.id)
+        ids.add(result.id)
+        return keep
+      })
+      return res.json(results)
     })
     .catch((err) => {
       res.status(500).json({ error: err.message })

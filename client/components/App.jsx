@@ -12,6 +12,8 @@ import BrowseListings from './BrowseListings'
 import ItemDetails from './ItemDetails'
 import ContactUs from './ContactUs'
 import ItemList from './ItemList'
+import SearchBar from './SearchBar'
+import SearchResults from './SearchResults'
 
 function App () {
   return (
@@ -32,6 +34,8 @@ function App () {
       <Route exact path='/testing' component={ItemList} />
 
       <Route path='/SignIn' component={SignIn} />
+      <Route path='/testing' component={SearchBar} />
+      <Route path='/searchresults/:searchinput' component={SearchResults} />
 
     </>
   )
