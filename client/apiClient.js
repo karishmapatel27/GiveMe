@@ -2,19 +2,26 @@ import request from 'superagent'
 
 const rootUrl = '/api/v1'
 
-export function getGiveMe () {
-  return request.get(rootUrl + '/giveMe')
-    .then(res => {
-      return res.body.items
+export function getItemCategory (category) {
+  return request.get(rootUrl + '/giveMe/categorylist/' + category)
+    .then((res) => {
+      return res.body
     })
 }
 
 export function getItems () {
   return request.get(rootUrl + '/giveMe')
-    .then(res => {
+    .then((res) => {
+      console.log(res)
       return res.body
     })
-    .catch(errorHandler('GET', rootUrl + '/giveMe'))
+}
+
+export function getItem (itemId) {
+  return request.get(rootUrl + '/giveme/itemdetails/' + itemId)
+    .then((res) => {
+      return res.body
+    })
 }
 
 export function addItem (item) {
@@ -24,6 +31,13 @@ export function addItem (item) {
       return res.body
     })
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
+}
+
+
+export function getItemsbySearch (searchinput) {
+  return request.get(rootUrl + '/giveme/searchresults/' + searchinput).then((res) => {
+    return res.body
+  })
 }
 
 // export function updateItem (item) {

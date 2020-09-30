@@ -22,7 +22,7 @@ exports.seed = knex =>
       {
         id: 3,
         user_id: 2,
-        name: 'Electric bike',
+        name: 'Eletric bike',
         category: 'toys',
         photo: 'https://trademe.tmcdn.co.nz/photoserver/full/1407501540.jpg ',
         description: 'Brand new 26" Hotebike 36V 13AH electric bike. Two mode: pedal assistant mode or pure electric with throttle.Our physical store in Auckland, Open 7 days a week. Welcome to try the Electric Bike before buying.',

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="footer"
+>
+  <footer>
+    <div
+      className="footer-left"
+    >
+      <p>
+        © 2020 GiveMe. All rights reserved
+      </p>
+    </div>
+    <div
+      className="socialMedia"
+    >
+      <a
+        className="fa fa-facebook"
+        href="#"
+      />
+      <a
+        className="fa fa-twitter"
+        href="#"
+      />
+      <a
+        className="fa fa-google"
+        href="#"
+      />
+      <a
+        className="fa fa-github"
+        href="https://github.com/pohutukawa-2020/GiveMe"
+        rel="noreferrer"
+        target="_blank"
+      />
+    </div>
+  </footer>
+</div>
+`;

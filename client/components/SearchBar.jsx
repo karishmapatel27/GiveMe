@@ -1,27 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { withRouter } from 'react-router'
 
-class SearchBar extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      search: ''
-    }
+function SearchBar (props) {
+  const [search, setSearch] = useState('')
+
+  function handleSubmit (e) {
+    e.preventDefault()
+
+    return props.history.push('/searchresults/' + search)
   }
 
-  updateSeacrh (event) {
-    this.setState({ search: event.target.value })
-  }
-
-  render () {
-    return (
-      <div>
-        {/* <ul>
-
-        </ul> */}
-        <input type='text' value={this.state.search} onChange={this.updateSearch.bind(this)} />
-      </div>
-    )
-  }
+  return (
+    <form className='alingElementNav' onSubmit={handleSubmit}>
+      <input className='input is-rounded is-small searchBar ' id='searchbar' placeholder='Search' type='text' onChange={event => setSearch(event.target.value)} />
+      <button className="button primaryBtn search">Search</button>
+    </form>
+  )
 }
 
-export default SearchBar
+export default withRouter(SearchBar)

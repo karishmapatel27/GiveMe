@@ -31,19 +31,59 @@
 }
 
 html {
-  background: rgb(121,9,74);
-  background: $gradient;
-  background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-  min-height: 100%;
-  background-repeat: no-repeat;
+//   background: rgb(121,9,74);
+//   background: $gradient;
+  background: linear-gradient(47deg, rgba(121,9,74,1), rgba(161,33,62,1), rgb(49, 4, 30), rgb(192, 121, 28));
+  // background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+//   animation: gradient 15s ease infinite;
+//   min-height: 100%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 0;
+//   padding: 0;
+}
+
+html {
+	// background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.globalBackground {
+  background-color: white;
   background-size: cover;
-  margin: 0;
-  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .logoImg {
   width: 200px;
   height: auto;
+ }
+
+.alingSearchBar .category{
+  background-color: white;
+  color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  align-items: center;
+ }
+
+ .category {
+  align-items: center;
  }
 
 .primaryBtn {
@@ -57,6 +97,7 @@ html {
   border-radius: 30px;
   font-weight: bold;
 }
+
 
 .primaryBtn:hover {
   color: white;
@@ -81,6 +122,10 @@ html {
   margin-top: 15px;
 }
 
+.dropdown-trigger {
+  padding-top: 4px;
+}
+
 .navLinks{
   display: flex;
   align-items: right;
@@ -96,7 +141,7 @@ html {
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 108, 23);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -130,6 +175,15 @@ html {
  // background: $gradient;
  // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
 }
+
+.search {
+  background-color: white;
+  color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-top: 0%;
+ }
 
 // Landing Page Styles
 .landing-wrapper {
@@ -179,10 +233,70 @@ html {
   font-weight: bold;
 }
 
+// Home Styles / item and browslisting
+.product-card {
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
+  width: 380px;
+  position: relative;
+  margin: 50px auto;
+  background: white;
+}
+.product-tumb {
+  border: solid 0.5px rgb(255, 108, 23);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  padding: 50px;
+  background: white;
+}
+
+.product-tumb img {
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-details {
+  padding: 30px;
+}
+
+// .product-details h4 a {
+//   font-weight: 500;
+//   display: block;
+//   margin-bottom: 18px;
+//   text-transform: uppercase;
+//   color: #363636;
+//   text-decoration: none;
+//   transition: 0.3s;
+// }
+
+.product-details h4 a:hover {
+  color: #FBB72C;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+}
+
+.product-bottom-details div {
+  float: left;
+  width: 50%;
+}
+
 // Form Styles / Register and Login forms
+
 .form {
   display: grid;
   background-color: white;
+  border: solid 0.5px rgb(255, 108, 23);
   box-shadow: var(--shadow);
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
@@ -190,17 +304,18 @@ html {
   border-radius: 25px;
 }
 
-.formRight {
-  display: grid;
-  padding: 5%;
-  min-width: 60%;
-}
-
 .formLeft {
   display: grid;
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.formRight {
+  display: grid;
+  padding: 5%;
+  min-width: 60%;
+  // min-height: 50%;
 }
 
 .formInput {
@@ -228,17 +343,36 @@ html {
   background-color: white;
   box-shadow: var(--shadow);
   display: flex;
+  border: solid 0.5px rgb(255, 108, 23);
   grid-template-columns: repeat(2, 1fr);
   margin: 5% 10%;
   border-radius: 25px;
   max-width: 90rem;
-  max-height: 80vh;
+  // max-height: 80vh;
 }
 
+.itemForm .formRight {
+  display: grid;
+  padding: 5%;
+  justify-content: right;
+  min-width: 60%;
+  // min-height: 50%;
+}
+
+// .imgContainer {
+//   background-size: cover;
+//   border-top-left-radius: 25px;
+//   border-bottom-left-radius: 25px;
+//   height: 100%;
+//   max-width: 100%;
+//   min-width: 80%;
+// }
+
 .cityImg {
+  background-size: cover;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  height: 80vh;
+  height: 100%;
   max-width: 100%;
   min-width: 80%;
 }
@@ -276,6 +410,28 @@ margin-right: auto;
 align-items: center;
 
 }
+.detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding: 3%;
+  width:100%;
+}
+
+.formDetail {
+  display: grid;
+  background-color: white;
+  box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
+  //grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  margin: 10rem 25rem;
+  border-radius: 25px;
+}
 
 .btnContainer {
 display: flex;
@@ -293,20 +449,31 @@ display: grid;
 /* Footer */
 footer {
   display: flex;
+  
 
-  background: var(--light);
-  color: var(--dark);
-  // text-align: center;
+}
 
+.footer-left {
+  display: flex;
+  // width: 80%;
+  background-color: rgb(255, 108, 23); 
 }
 
 .footer {
   margin-top: 1rem;
   padding: 1.5rem;
-  position:relative;
+  position: absolute;
   bottom: 0;
-  left:0;
   width:100%;
+  background-color: rgb(255, 108, 23); 
+}
+
+.socialMedia{
+  margin-left: auto;
+  margin-right: 0;
+  // width: 20%;
+  // justify-content: right;
+  // float: right;
 }
 
 @media only screen and (max-width: 768px) {
