@@ -79,6 +79,11 @@ html {
   border: solid;
   border-width: 1px;
   border-color: white;
+  align-items: center;
+ }
+
+ .category {
+  align-items: center;
  }
 
 .primaryBtn {
@@ -115,6 +120,10 @@ html {
 .categoriesMenu{
   margin-left: 1110px;
   margin-top: 15px;
+}
+
+.dropdown-trigger {
+  padding-top: 4px;
 }
 
 .navLinks{
@@ -166,6 +175,15 @@ html {
  // background: $gradient;
  // background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
 }
+
+.search {
+  background-color: white;
+  color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-top: 0%;
+ }
 
 // Landing Page Styles
 .landing-wrapper {

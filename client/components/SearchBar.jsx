@@ -11,9 +11,9 @@ function SearchBar (props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='alingElementNav' onSubmit={handleSubmit}>
       <input className='input is-rounded is-small searchBar ' id='searchbar' placeholder='Search' type='text' onChange={event => setSearch(event.target.value)} />
-      <button className="button primaryBtn">Search</button>
+      <button className="button primaryBtn search">Search</button>
     </form>
   )
 }

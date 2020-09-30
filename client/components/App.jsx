@@ -30,10 +30,8 @@ function App () {
       <Route exact path='/ItemDetails/:id' component={ItemDetails} />
 
       <Route exact path='/ContactUs' component={ContactUs} />
-      <Route exact path='/testing' component={ItemList} />
 
       <Route path='/SignIn' component={SignIn} />
-      <Route path='/testing' component={SearchBar} />
       <Route path='/searchresults/:searchinput' component={SearchResults} />
 
     </>
