@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import Nav from './Nav'
+import Footer from './Footer'
+import { getItemCategory } from '../apiClient'
 
-import { getItems } from '../apiClient'
-
-import Item from './Item'
-
-export default function BrowseListings () {
-  const [items, setItems] = useState({
-    items: []
+function ItemsByCategory (props) {
+  const [category, setItems] = useState({
+    itemsName: []
   })
   useEffect(() => {
-    getItems()
+    getItemCategory(props.match.params.category)
       .then((res) => {
         return setItems(res)
       })
@@ -18,17 +17,21 @@ export default function BrowseListings () {
       })
   }, [])
   return (
-    <>
+    <div>
+      <Nav/>
       <div>
         <ul className="imageGridContainer" >
-          {items.items.map((item) => {
+          {category.itemsName.map((item) => {
             return <li className="imageGridItem" key={item.id}>
-              <Item key={item.id} item={item} />
+              <li key={item.id} item={category} />
 
             </li>
           })}
         </ul>
       </div>
-    </>
+      <Footer/>
+    </div>
   )
 }
+
+export default ItemsByCategory

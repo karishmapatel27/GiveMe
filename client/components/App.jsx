@@ -12,11 +12,12 @@ import BrowseListings from './BrowseListings'
 import ItemDetails from './ItemDetails'
 import SearchBar from './SearchBar'
 import ContactUs from './ContactUs'
+import ItemsByCategory from './ItemsByCategory'
 
 function App () {
   return (
     <>
-
+      <Route exact path='/categorylist/:category' component={ItemsByCategory} />
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/About' component={LandingPage}/>
 
