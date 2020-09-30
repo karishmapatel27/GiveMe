@@ -33,6 +33,7 @@ function Register (props) {
   }
 
   return (
+
     <div className="form" >
       <div className='formLeft'>
         <img className="logoImg" src='./img/logo-txt-orange.png' />
@@ -50,7 +51,6 @@ function Register (props) {
         <button type="button" className="button primaryBtn" onClick={handleClick} data-testid="submitButton">Register</button>
 
         <Link className="" onClick={handleClick} to="/signin">Sign In</Link>
-
       </div>
     </div>
   )

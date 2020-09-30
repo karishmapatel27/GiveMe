@@ -8,7 +8,7 @@ import Nav from './Nav'
 // import GalleryImage from './GalleryImage'
 import BrowseListings from './BrowseListings'
 import Footer from './Footer'
-function Home() {
+function Home () {
   const [, setUser] = useContext(UserContext)
 
   useEffect(() => {
@@ -18,13 +18,12 @@ function Home() {
   }, [])
 
   return (
-    <div className='container-footer'>
-      <Nav />
-      <div className='columns'>
-        <Link to="/ItemDetails">Item Details</Link>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav />
+        <BrowseListings />
+        <Footer />
       </div>
-      <BrowseListings />
-      <Footer />
     </div>
   )
 }

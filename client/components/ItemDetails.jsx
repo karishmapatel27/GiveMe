@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getItem } from '../apiClient'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 export default function ItemDetails (props) {
   const [item, setItem] = useState({
@@ -18,39 +20,55 @@ export default function ItemDetails (props) {
   }, [])
 
   return (
-    <div className='container-footer'>
-      <Nav/>
-      <div className="form">
-        <div className='itemName'>
-          <h2>
-            <strong>{item.name}</strong>
-          </h2>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav/>
+        <div className="formDetail">
+          <div className="detail">
+            <div className='itemName'>
+
+              <img
+                src={item.photo}
+                style={{ width: '300px', height: '300px' }}
+                alt=''
+              />
+            </div>
+
+            <div className='itemDisplay'>
+              <h1>
+                {item.name}
+              </h1>
+              <br/>
+              <p>
+                {/* Category: {item.category} */}
+              </p>
+              <p>
+              Description: {item.description}
+              </p>
+              <br/>
+
+              <p>
+            Location: {item.location}
+              </p>
+              <br/>
+              <IfAuthenticated>
+                <p>
+              Username: {item.username}
+                </p>
+                <p>
+              Email: {item.email}
+                </p>
+              </IfAuthenticated>
+              <IfNotAuthenticated>
+                <Link to='/signin' className="highlight">Please register or sign in to get the contact details</Link>
+
+              </IfNotAuthenticated>
+
+            </div>
+          </div>
         </div>
-
-        <div className='itemDisplay'>
-          <br></br>
-          <img
-            src={item.photo}
-            style={{ width: '200px', height: '200px' }}
-            alt=''
-          />
-          <br></br>
-          <p>
-            <strong>Category: {item.category} </strong>
-          </p>
-          <p>
-            <strong>Description: {item.description} </strong>
-          </p>
-
-          <br></br>
-          <br></br>
-          <p>
-            <strong>Location: {item.location} </strong>
-          </p>
-
-        </div>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }

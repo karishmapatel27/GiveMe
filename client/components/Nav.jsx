@@ -1,10 +1,11 @@
+import { logOff } from 'authenticare/client/auth'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 import CategoriesMenu from './CategoriesMenu'
 
-function Nav() {
+function Nav () {
   return (
     <div className='alingElementNav'>
       <img className="nav-logo" src='./img/logo-txt-orange.png' />
@@ -25,7 +26,12 @@ function Nav() {
         <Link className="link" to="/Home">Home</Link>
         <Link className="link" to="/About">About</Link>
         <Link className="link" to="/ContactUs">Contact Us</Link>
-        <Link className="link highlight" to="/SignIn">Sign In</Link>
+        <IfAuthenticated>
+          <Link className="link highlight" to="/signin" onClick={logOff}>Log out</Link>
+        </IfAuthenticated>
+        <IfNotAuthenticated>
+          <Link className="link highlight" to="/SignIn">Sign In</Link>
+        </IfNotAuthenticated>
       </div>
     </div >
   )
