@@ -41,18 +41,20 @@ router.get('/browselistings/:name', (req, res) => {
 
 router.post('/', (req, res) => {
   const newItem = {
+    user_id: req.body.userId,
     name: req.body.name,
     category: req.body.category,
     photo: req.body.photo,
     description: req.body.description,
     location: req.body.location
   }
-  items.addItem(newItem)
+  return items.addItem(newItem)
     .then(ids => {
-      items.getItem(ids[0])
+      return items.getItem(ids[0])
         .then(result => {
           const returnedItem = utils.mapResult([result])
           res.json(returnedItem)
+          return null
         })
     })
 })

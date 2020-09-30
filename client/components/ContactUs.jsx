@@ -17,30 +17,32 @@ function ContactUs () {
   }
 
   return (
-    <div className='container-footer'>
-      <Nav/>
-      <div className="form">
-        <div className="formLeft">
-          <img src="./img/logo-txt-orange.png" alt="logo" className="logoImg"/>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav/>
+        <div className="form">
+          <div className="formLeft">
+            <img src="./img/logo-txt-orange.png" alt="logo" className="logoImg"/>
+          </div>
+          <div className="formRight">
+            <h1>Contact Us</h1>
+            <form onSubmit={sendEmail}>
+
+              <input type="text" className="formInput" placeholder="Name" name="name" />
+
+              <input type="email" className="formInput" placeholder="Email Address" name="email" />
+
+              <input type="text" className="formInput" placeholder="Subject" name="subject" />
+
+              <textarea className="textarea" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+
+              <input type="submit" className="button primaryBtn" value="Send Message"></input>
+            </form>
+          </div>
+
         </div>
-        <div className="formRight">
-          <h1>Contact Us</h1>
-          <form onSubmit={sendEmail}>
-
-            <input type="text" className="formInput" placeholder="Name" name="name" />
-
-            <input type="email" className="formInput" placeholder="Email Address" name="email" />
-
-            <input type="text" className="formInput" placeholder="Subject" name="subject" />
-
-            <textarea className="textarea" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
-
-            <input type="submit" className="button primaryBtn" value="Send Message"></input>
-          </form>
-        </div>
-
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }
