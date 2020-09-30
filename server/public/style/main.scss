@@ -226,7 +226,7 @@ html {
   background: white;
 }
 .product-tumb {
-  border: solid 0.8px rgb(255, 108, 23);
+  border: solid 0.5px rgb(255, 108, 23);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border-bottom: none;
@@ -408,6 +408,7 @@ align-items: center;
   display: grid;
   background-color: white;
   box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
   //grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
   margin: 10rem 25rem;
