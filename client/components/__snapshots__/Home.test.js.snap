@@ -2,151 +2,168 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="container-footer"
+  className="globalBackground"
 >
   <div
-    className="alingElementNav"
+    className="container-footer"
   >
-    <img
-      className="nav-logo"
-      src="./img/logo-txt-orange.png"
-    />
     <div
-      className="alingSearchBar"
+      className="alingElementNav"
     >
-      <input
-        className="input is-rounded is-small searchBar "
-        id="searchbar "
-        name="searchbar"
-        placeholder="Search"
-        type="email"
+      <img
+        className="nav-logo"
+        src="./img/logo-txt-white.png"
       />
-      <div>
-        <div
-          className="dropdown"
+      <div
+        className="alingSearchBar"
+      >
+        <form
+          className="alingElementNav"
+          onSubmit={[Function]}
         >
-          <div
-            className="dropdown-trigger"
+          <input
+            className="input is-rounded is-small searchBar "
+            id="searchbar"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+          />
+          <button
+            className="button primaryBtn search"
           >
-            <button
-              aria-controls="dropdown-menu3"
-              aria-haspopup="true"
-              className="button primaryBtn "
-              onClick={[Function]}
-            >
-              Categories
-            </button>
-          </div>
+            Search
+          </button>
+        </form>
+        <div>
           <div
-            className="dropdown-menu"
-            id="dropdown-menu3"
-            role="menu"
+            className="dropdown"
           >
             <div
-              className="dropdown-content"
+              className="dropdown-trigger"
             >
-              <a
-                className="dropdown-item"
-                href="#"
+              <button
+                aria-controls="dropdown-menu3"
+                aria-haspopup="true"
+                className="button primaryBtn category"
+                onClick={[Function]}
               >
-                Books
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
+                Categories
+              </button>
+            </div>
+            <div
+              className="dropdown-menu"
+              id="dropdown-menu3"
+              role="menu"
+            >
+              <div
+                className="dropdown-content"
               >
-                Furniture
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-              >
-                Toys
-              </a>
+                <a
+                  className="dropdown-item"
+                  href="#/categorylist/books"
+                  onClick={[Function]}
+                >
+                  Books
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="#/categorylist/furniture"
+                  onClick={[Function]}
+                >
+                  Furniture
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="#/categorylist/toys"
+                  onClick={[Function]}
+                >
+                  Toys
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div
+        className="navLinks"
+      >
+        <a
+          className="link"
+          href="#/signin"
+          onClick={[Function]}
+        >
+          Add Item
+        </a>
+        <a
+          className="link"
+          href="#/Home"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="link"
+          href="#/About"
+          onClick={[Function]}
+        >
+          About
+        </a>
+        <a
+          className="link"
+          href="#/ContactUs"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+        <a
+          className="link"
+          href="#/SignIn"
+          onClick={[Function]}
+        >
+          Sign In
+        </a>
+      </div>
+    </div>
+    <div>
+      <ul
+        className="imageGridContainer"
+      />
     </div>
     <div
-      className="navLinks"
+      className="footer"
     >
-      <a
-        className="link"
-        href="#/signin"
-        onClick={[Function]}
-      >
-        Add Item
-      </a>
-      <a
-        className="link"
-        href="#/Home"
-        onClick={[Function]}
-      >
-        Home
-      </a>
-      <a
-        className="link"
-        href="#/About"
-        onClick={[Function]}
-      >
-        About
-      </a>
-      <a
-        className="link"
-        href="#/ContactUs"
-        onClick={[Function]}
-      >
-        Contact Us
-      </a>
-      <a
-        className="link highlight"
-        href="#/SignIn"
-        onClick={[Function]}
-      >
-        Sign In
-      </a>
+      <footer>
+        <div
+          className="footer-left"
+        >
+          <p>
+            © 2020 GiveMe. All rights reserved
+          </p>
+        </div>
+        <div
+          className="socialMedia"
+        >
+          <a
+            className="fa fa-facebook"
+            href="#"
+          />
+          <a
+            className="fa fa-twitter"
+            href="#"
+          />
+          <a
+            className="fa fa-google"
+            href="#"
+          />
+          <a
+            className="fa fa-github"
+            href="https://github.com/pohutukawa-2020/GiveMe"
+            rel="noreferrer"
+            target="_blank"
+          />
+        </div>
+      </footer>
     </div>
-  </div>
-  <div>
-    <ul
-      className="imageGridContainer"
-    />
-  </div>
-  <div
-    className="footer"
-  >
-    <footer>
-      <div
-        className="footer-left"
-      >
-        <p>
-          © 2020 GiveMe. All rights reserved
-        </p>
-      </div>
-      <div
-        className="socialMedia"
-      >
-        <a
-          className="fa fa-facebook"
-          href="#"
-        />
-        <a
-          className="fa fa-twitter"
-          href="#"
-        />
-        <a
-          className="fa fa-google"
-          href="#"
-        />
-        <a
-          className="fa fa-github"
-          href="https://github.com/pohutukawa-2020/GiveMe"
-          rel="noreferrer"
-          target="_blank"
-        />
-      </div>
-    </footer>
   </div>
 </div>
 `;
