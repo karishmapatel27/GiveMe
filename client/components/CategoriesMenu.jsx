@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function CategoriesMenu () {
+function CategoriesMenu() {
   const [isActive, setActive] = useState(false)
 
   const handleToggle = () => {
@@ -26,7 +26,7 @@ function CategoriesMenu () {
     <div >
       <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
         <div className="dropdown-trigger">
-          <button onClick={handleToggle} className="button primaryBtn " aria-haspopup="true" aria-controls="dropdown-menu3">
+          <button onClick={handleToggle} className="button primaryBtn category" aria-haspopup="true" aria-controls="dropdown-menu3">
             Categories
           </button>
         </div>

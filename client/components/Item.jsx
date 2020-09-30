@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Item ({ item }) {
+export default function Item({ item }) {
   const itemID = String(item.id)
 
   return (
     <div className='product-card'>
       <div className='product-tumb'>
         <Link to={`/ItemDetails/${itemID}`}>
-          <img src={item.photo} style={{ width: '250px', height: '250px' }}/>
+          <img src={item.photo} style={{ width: '250px', height: '250px' }} />
         </Link>
       </div>
       <div className="product-details">

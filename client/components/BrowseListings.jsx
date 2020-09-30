@@ -4,7 +4,7 @@ import { getItems } from '../apiClient'
 
 import Item from './Item'
 
-export default function BrowseListings () {
+export default function BrowseListings() {
   const [items, setItems] = useState({
     items: []
   })

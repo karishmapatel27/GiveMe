@@ -7,7 +7,7 @@ import ListAnItem from './ListAnItem'
 it('renders correctly', () => {
   const tree = renderer
     .create(
-      <ListAnItem/>
+      <ListAnItem />
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
