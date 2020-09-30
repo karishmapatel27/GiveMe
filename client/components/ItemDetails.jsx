@@ -7,7 +7,7 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 export default function ItemDetails (props) {
   const [item, setItem] = useState({
-    item: {}
+    item: []
   })
   useEffect(() => {
     getItem(props.match.params.id)
@@ -18,7 +18,7 @@ export default function ItemDetails (props) {
         console.log('error: ', error.message)
       })
   }, [])
-  // console.log(item.name)
+
   return (
     <div className="globalBackground">
       <div className='container-footer'>

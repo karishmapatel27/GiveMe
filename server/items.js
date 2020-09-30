@@ -7,7 +7,8 @@ module.exports = {
   addItem,
   searchItemsByName,
   searchItemsByDescription,
-  searchItemsByCategory
+  searchItemsByCategory,
+  getItemsByCategory
 }
 
 function getItems () {
@@ -47,6 +48,12 @@ function searchItemsByCategory (category) {
     .select('id', 'name', 'category', 'photo', 'description', 'location')
     .where('category', 'like', `%${category}%`)
 }
+function getItemsByCategory (category) {
+  return db('items')
+    .select('id', 'category', 'photo', 'description', 'location')
+    . where('category', category)
+}
+
 // function displayContact (id) {
 //   return db('users')
 //     .join('items', 'users.id', 'items.user_id')

@@ -43,6 +43,16 @@ router.get('/searchresults/:searchinput', (req, res) => {
       res.status(500).json({ error: err.message })
     })
 })
+router.get('/categorylist/:category', (req, res) => {
+  const category = req.params.category
+  items.getItemsByCategory(category)
+    .then((items) => {
+      return res.json(items)
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
+})
 
 router.post('/', (req, res) => {
   const newItem = {
