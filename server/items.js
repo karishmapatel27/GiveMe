@@ -28,7 +28,7 @@ function addItem (itemData) {
 
 function getItemsByCategory (category) {
   return db('items')
-    .select('category', 'photo', 'description', 'location')
+    .select('id', 'category', 'photo', 'description', 'location')
     . where('category', category)
 }
 

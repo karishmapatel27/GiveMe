@@ -17,7 +17,7 @@ import ItemsByCategory from './ItemsByCategory'
 function App () {
   return (
     <>
-      <Route exact path='/categorylist/:category' component={ItemsByCategory} />
+      <Route path='/categorylist/:category' component={ItemsByCategory} />
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/About' component={LandingPage}/>
 

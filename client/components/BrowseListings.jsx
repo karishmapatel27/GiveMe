@@ -20,11 +20,10 @@ export default function BrowseListings () {
   return (
     <>
       <div>
-        <ul className="imageGridContainer" >
+        <ul className="imageGridContainer">
           {items.items.map((item) => {
             return <li className="imageGridItem" key={item.id}>
-              <Item key={item.id} item={item} />
-
+              <Item item={item} />
             </li>
           })}
         </ul>

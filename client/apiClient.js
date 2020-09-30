@@ -3,7 +3,7 @@ import request from 'superagent'
 const rootUrl = '/api/v1'
 
 export function getItemCategory (category) {
-  return request.get(rootUrl + 'giveMe/categorylist/' + category)
+  return request.get(rootUrl + '/giveMe/categorylist/' + category)
     .then((res) => {
       return res.body
     })
