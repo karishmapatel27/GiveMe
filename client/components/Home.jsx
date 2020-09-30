@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
-import { Link } from 'react-router-dom'
 
 import Nav from './Nav'
 // import CategoriesMenu from './CategoriesMenu'
@@ -18,21 +17,9 @@ function Home() {
   }, [])
 
   return (
-<<<<<<< Updated upstream
     <div className='container-footer'>
       <Nav />
       <BrowseListings />
-=======
-    <>
-      <div>
-        <Nav/>
-        <div className='columns'>
-          <Link className="" to="/ListAnItem">Add Item</Link>
-          <Link to="/ItemDetails">Item Details</Link>
-        </div>
-        <GalleryImage/>
-      </div>
->>>>>>> Stashed changes
       <Footer />
     </div>
   )

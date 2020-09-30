@@ -1,24 +1,23 @@
-import React from 'react'
+// import React from 'react'
+// import BrowseListings from './BrowseListings'
 
-class SearchBar extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      search: ''
-    }
-  }
+// class SearchBar extends React.Component {
+//   constructor () {
+//     super()
+//     this.state = {
+//       search: ''
+//     }
+//   }
 
-  updateSeacrh (event) {
-    this.setState({ search: event.target.value })
-  }
+//   updateSeacrh (event) {
+//     this.setState({ search: event.target.value })
+//   }
 
-  render () {
-    return (
-      <div>
-        <input type='text' value={this.state.search} onChange={this.updateSearch.bind(this)} />
-      </div>
-    )
-  }
-}
+//   render () {
+//     return (
+      
+//     )
+//   }
+// }
 
-export default SearchBar
+// export default SearchBar

@@ -8,6 +8,7 @@ export default function BrowseListings () {
   const [items, setItems] = useState({
     items: []
   })
+
   useEffect(() => {
     getItems()
       .then((res) => {
@@ -17,12 +18,15 @@ export default function BrowseListings () {
         console.log('error: ', error.message)
       })
   }, [])
+
   return (
     <>
       <div>
+        <div>
+
+        </div>
         <ul className="imageGridContainer" >
           {items.items.map((item) => {
-            console.log(item.ca)
             return <li className="imageGridItem" key={item.id}>
               <Item key={item.id} item={item} /></li>
           })}

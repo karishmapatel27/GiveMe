@@ -25,7 +25,12 @@ export function addItem (item) {
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
 }
 
-
+export function getItembyName (itemName) {
+  return request.get(rootUrl + '/giveme/browselistings/' + itemName).then((res) => {
+    console.log()
+    return res.body
+  })
+}
 
 // export function updateItem (item) {
 //   return request.patch(`/v1/items/${item.id}`)

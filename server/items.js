@@ -4,7 +4,8 @@ const db = require('knex')(config)
 module.exports = {
   getItems,
   getItem,
-  addItem
+  addItem,
+  getItemByName
 }
 
 function getItems () {
@@ -26,6 +27,13 @@ function addItem (itemData) {
     .insert(itemData)
 }
 
+function getItemByName(name) {
+  console.log(name)
+  return db('items')
+    .select('id', 'name', 'category', 'photo', 'description', 'location')
+    .where('name', name)
+    .first()
+}
 // function displayContact (id) {
 //   return db('users')
 //     .join('items', 'users.id', 'items.user_id')

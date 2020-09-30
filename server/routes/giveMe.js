@@ -28,6 +28,17 @@ router.get('/itemdetails/:id', (req, res) => {
     })
 })
 
+router.get('/browselistings/:name', (req, res) => {
+  const name = String(req.params.name)
+  items.getItemByName(name)
+    .then((relevantItems) => {
+      return res.json(relevantItems)
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/', (req, res) => {
   const newItem = {
     name: req.body.name,
