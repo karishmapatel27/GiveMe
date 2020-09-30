@@ -26,7 +26,6 @@ function ItemsByCategory (props) {
             </li>
           })}
         </ul>
-
         <Footer/>
       </div>
     </div>

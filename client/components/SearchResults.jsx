@@ -12,7 +12,6 @@ export default function SearchResults (props) {
   useEffect(() => {
     getItemsbySearch(props.match.params.searchinput)
       .then((res) => {
-          console.log(res)
         return setItems([...res])
       })
       .catch((error) => {
@@ -21,19 +20,18 @@ export default function SearchResults (props) {
   }, [props.match.params])
 
   return (
-    <>
-      <div>
-        <div>
-          <Nav />
-        </div>
+    <div className='globalBackground'>
+      <div className='container-footer'>
+        <Nav />
         <ul className="imageGridContainer" >
           {items.map((item) => {
             return <li className="imageGridItem" key={item.id}>
-              <Item key={item.id} item={item} /></li>
+              <Item key={item.id} item={item} />
+            </li>
           })}
         </ul>
         <Footer />
       </div>
-    </>
+    </div>
   )
 }
