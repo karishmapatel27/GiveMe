@@ -16,9 +16,9 @@ function ItemsByCategory (props) {
       })
   }, [props.match.params])
   return (
-    <div>
-      <Nav/>
-      <div>
+    <div className='globalBackground'>
+      <div className='container-footer'>
+        <Nav/>
         <ul className="imageGridContainer">
           {category.map((item) => {
             return <li className="imageGridItem" key={item.id}>
@@ -26,8 +26,9 @@ function ItemsByCategory (props) {
             </li>
           })}
         </ul>
+
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }
