@@ -62,7 +62,7 @@ html {
 }
 
 .globalBackground {
-  background-color:rgb(255, 108, 23);
+  background-color: white;
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
@@ -71,6 +71,14 @@ html {
 .logoImg {
   width: 200px;
   height: auto;
+ }
+
+.alingSearchBar .category{
+  background-color: white;
+  color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
  }
 
 .primaryBtn {
@@ -84,6 +92,7 @@ html {
   border-radius: 30px;
   font-weight: bold;
 }
+
 
 .primaryBtn:hover {
   color: white;
@@ -123,7 +132,7 @@ html {
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 108, 23);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -210,14 +219,17 @@ html {
 .product-card {
   border-radius: 25px;
   box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
   width: 380px;
   position: relative;
   margin: 50px auto;
   background: white;
 }
 .product-tumb {
+  border: solid 0.8px rgb(255, 108, 23);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +278,7 @@ html {
 .form {
   display: grid;
   background-color: white;
+  border: solid 0.5px rgb(255, 108, 23);
   box-shadow: var(--shadow);
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
@@ -312,6 +325,7 @@ html {
   background-color: white;
   box-shadow: var(--shadow);
   display: flex;
+  border: solid 0.5px rgb(255, 108, 23);
   grid-template-columns: repeat(2, 1fr);
   margin: 5% 10%;
   border-radius: 25px;
@@ -416,15 +430,14 @@ display: grid;
 /* Footer */
 footer {
   display: flex;
-  // background: var(--light);
-  // color: var(--dark);
-  // text-align: center;
+  
 
 }
 
 .footer-left {
   display: flex;
   // width: 80%;
+  background-color: rgb(255, 108, 23); 
 }
 
 .footer {
@@ -433,6 +446,7 @@ footer {
   position: absolute;
   bottom: 0;
   width:100%;
+  background-color: rgb(255, 108, 23); 
 }
 
 .socialMedia{
