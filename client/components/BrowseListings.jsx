@@ -8,6 +8,7 @@ export default function BrowseListings() {
   const [items, setItems] = useState({
     items: []
   })
+
   useEffect(() => {
     getItems()
       .then((res) => {
@@ -17,6 +18,7 @@ export default function BrowseListings() {
         console.log('error: ', error.message)
       })
   }, [])
+
   return (
     <>
       <div>

@@ -2,6 +2,7 @@ import { logOff } from 'authenticare/client/auth'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
+import SearchBar from './SearchBar'
 
 import CategoriesMenu from './CategoriesMenu'
 
@@ -11,7 +12,7 @@ function Nav() {
       <img className="nav-logo" src='./img/logo-txt-white.png' />
 
       <div className='alingSearchBar'>
-        <input className="input is-rounded is-small searchBar " id="searchbar " name="searchbar" placeholder="Search" type="email" />
+        <SearchBar />
         <CategoriesMenu />
       </div>
 

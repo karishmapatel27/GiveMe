@@ -10,8 +10,8 @@ import ListAnItem from './ListAnItem'
 
 import BrowseListings from './BrowseListings'
 import ItemDetails from './ItemDetails'
-import SearchBar from './SearchBar'
 import ContactUs from './ContactUs'
+import SearchResults from './SearchResults'
 import ItemsByCategory from './ItemsByCategory'
 
 function App () {
@@ -29,10 +29,11 @@ function App () {
 
       <Route exact path='/ItemDetails/:id' component={ItemDetails} />
 
-      <Route exact path='/SearchBar' component={SearchBar} />
       <Route exact path='/ContactUs' component={ContactUs} />
 
       <Route path='/SignIn' component={SignIn} />
+      <Route path='/searchresults/:searchinput' component={SearchResults} />
+
     </>
   )
 }

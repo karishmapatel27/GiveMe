@@ -33,6 +33,13 @@ export function addItem (item) {
     .catch(errorHandler('POST', rootUrl + '/giveMe'))
 }
 
+
+export function getItemsbySearch (searchinput) {
+  return request.get(rootUrl + '/giveme/searchresults/' + searchinput).then((res) => {
+    return res.body
+  })
+}
+
 // export function updateItem (item) {
 //   return request.patch(`/v1/items/${item.id}`)
 //     .send(item)
