@@ -28,20 +28,33 @@ router.get('/itemdetails/:id', (req, res) => {
     })
 })
 
+router.get('/categorylist/:category', (req, res) => {
+  const category = req.params.category
+  items.getItemsByCategory(category)
+    .then((items) => {
+      return res.json(items)
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message })
+    })
+})
+
 router.post('/', (req, res) => {
   const newItem = {
+    user_id: req.body.userId,
     name: req.body.name,
     category: req.body.category,
     photo: req.body.photo,
     description: req.body.description,
     location: req.body.location
   }
-  items.addItem(newItem)
+  return items.addItem(newItem)
     .then(ids => {
-      items.getItem(ids[0])
+      return items.getItem(ids[0])
         .then(result => {
           const returnedItem = utils.mapResult([result])
           res.json(returnedItem)
+          return null
         })
     })
 })

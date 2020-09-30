@@ -7,7 +7,7 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 export default function ItemDetails (props) {
   const [item, setItem] = useState({
-    item: {}
+    item: []
   })
   useEffect(() => {
     getItem(props.match.params.id)
@@ -18,55 +18,57 @@ export default function ItemDetails (props) {
         console.log('error: ', error.message)
       })
   }, [])
-  console.log(item.name)
+
   return (
-    <div className='container-footer'>
-      <Nav/>
-      <div className="formDetail">
-        <div className="detail">
-          <div className='itemName'>
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav/>
+        <div className="formDetail">
+          <div className="detail">
+            <div className='itemName'>
 
-            <img
-              src={item.photo}
-              style={{ width: '300px', height: '300px' }}
-              alt=''
-            />
-          </div>
+              <img
+                src={item.photo}
+                style={{ width: '300px', height: '300px' }}
+                alt=''
+              />
+            </div>
 
-          <div className='itemDisplay'>
-            <h1>
-              {item.name}
-            </h1>
-            <br/>
-            <p>
-              {/* Category: {item.category} */}
-            </p>
-            <p>
+            <div className='itemDisplay'>
+              <h1>
+                {item.name}
+              </h1>
+              <br/>
+              <p>
+                {/* Category: {item.category} */}
+              </p>
+              <p>
               Description: {item.description}
-            </p>
-            <br/>
+              </p>
+              <br/>
 
-            <p>
+              <p>
             Location: {item.location}
-            </p>
-            <br/>
-            <IfAuthenticated>
-              <p>
+              </p>
+              <br/>
+              <IfAuthenticated>
+                <p>
               Username: {item.username}
-              </p>
-              <p>
+                </p>
+                <p>
               Email: {item.email}
-              </p>
-            </IfAuthenticated>
-            <IfNotAuthenticated>
-              <Link to='/signin' className="highlight">Please register or sign in to get the contact details</Link>
+                </p>
+              </IfAuthenticated>
+              <IfNotAuthenticated>
+                <Link to='/signin' className="highlight">Please register or sign in to get the contact details</Link>
 
-            </IfNotAuthenticated>
+              </IfNotAuthenticated>
 
+            </div>
           </div>
         </div>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }

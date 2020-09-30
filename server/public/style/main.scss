@@ -31,19 +31,54 @@
 }
 
 html {
-  background: rgb(121,9,74);
-  background: $gradient;
-  background: linear-gradient(47deg, rgba(121,9,74,1) 0%, rgba(161,33,62,1) 37%, rgba(255,129,87,1) 100%);
-  min-height: 100%;
-  background-repeat: no-repeat;
+//   background: rgb(121,9,74);
+//   background: $gradient;
+  background: linear-gradient(47deg, rgba(121,9,74,1), rgba(161,33,62,1), rgb(49, 4, 30), rgb(192, 121, 28));
+  // background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+//   animation: gradient 15s ease infinite;
+//   min-height: 100%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 0;
+//   padding: 0;
+}
+
+html {
+	// background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.globalBackground {
+  background-color: white;
   background-size: cover;
-  margin: 0;
-  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .logoImg {
   width: 200px;
   height: auto;
+ }
+
+.alingSearchBar .category{
+  background-color: white;
+  color: rgb(255, 108, 23);
+  border: solid;
+  border-width: 1px;
+  border-color: white;
  }
 
 .primaryBtn {
@@ -57,6 +92,7 @@ html {
   border-radius: 30px;
   font-weight: bold;
 }
+
 
 .primaryBtn:hover {
   color: white;
@@ -96,7 +132,7 @@ html {
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 108, 23);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -183,14 +219,17 @@ html {
 .product-card {
   border-radius: 25px;
   box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
   width: 380px;
   position: relative;
   margin: 50px auto;
   background: white;
 }
 .product-tumb {
+  border: solid 0.5px rgb(255, 108, 23);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,6 +239,7 @@ html {
 }
 
 .product-tumb img {
+  border-radius: 25px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -238,6 +278,7 @@ html {
 .form {
   display: grid;
   background-color: white;
+  border: solid 0.5px rgb(255, 108, 23);
   box-shadow: var(--shadow);
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
@@ -284,6 +325,7 @@ html {
   background-color: white;
   box-shadow: var(--shadow);
   display: flex;
+  border: solid 0.5px rgb(255, 108, 23);
   grid-template-columns: repeat(2, 1fr);
   margin: 5% 10%;
   border-radius: 25px;
@@ -366,6 +408,7 @@ align-items: center;
   display: grid;
   background-color: white;
   box-shadow: var(--shadow);
+  border: solid 0.5px rgb(255, 108, 23);
   //grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
   margin: 10rem 25rem;
@@ -388,15 +431,14 @@ display: grid;
 /* Footer */
 footer {
   display: flex;
-  // background: var(--light);
-  // color: var(--dark);
-  // text-align: center;
+  
 
 }
 
 .footer-left {
   display: flex;
   // width: 80%;
+  background-color: rgb(255, 108, 23); 
 }
 
 .footer {
@@ -405,6 +447,7 @@ footer {
   position: absolute;
   bottom: 0;
   width:100%;
+  background-color: rgb(255, 108, 23); 
 }
 
 .socialMedia{

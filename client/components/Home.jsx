@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from 'react'
 import { isAuthenticated } from 'authenticare/client'
 import { UserContext, updateUserContext } from './UserContext'
 import { Link } from 'react-router-dom'
-
 import Nav from './Nav'
 // import CategoriesMenu from './CategoriesMenu'
 // import GalleryImage from './GalleryImage'
@@ -18,10 +17,12 @@ function Home() {
   }, [])
 
   return (
-    <div className='container-footer'>
-      <Nav />
-      <BrowseListings />
-      <Footer />
+    <div className="globalBackground">
+      <div className='container-footer'>
+        <Nav />
+        <BrowseListings />
+        <Footer />
+      </div>
     </div>
   )
 }

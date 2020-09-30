@@ -33,6 +33,7 @@ function SignIn (props) {
   }
 
   return (
+
     <div className="form">
       <div className='formLeft'>
         <img className="logoImg" src='./img/logo-txt-orange.png' />
@@ -48,6 +49,7 @@ function SignIn (props) {
         <Link className="" onClick={handleClick} to="/register">Register</Link>
       </div>
     </div>
+
   )
 }
 export default SignIn

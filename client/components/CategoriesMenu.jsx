@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function CategoriesMenu () {
+function CategoriesMenu() {
   const [isActive, setActive] = useState(false)
 
   const handleToggle = () => {
@@ -11,23 +12,39 @@ function CategoriesMenu () {
         break
     }
   }
+  // useEffect(() => {
+  //   getItemCategory()
+  //     .then((res) => {
+  //       return setItems(res)
+  //     })
+  //     .catch((error) => {
+  //       console.log('error: ', error.message)
+  //     })
+  // }, [])
 
   return (
     <div >
       <div className={isActive ? 'dropdown is-active' : 'dropdown'}>
         <div className="dropdown-trigger">
-          <button onClick={handleToggle} className="button primaryBtn " aria-haspopup="true" aria-controls="dropdown-menu3">
+          <button onClick={handleToggle} className="button primaryBtn category" aria-haspopup="true" aria-controls="dropdown-menu3">
             Categories
           </button>
         </div>
         <div className="dropdown-menu" id="dropdown-menu3" role="menu">
           <div className="dropdown-content">
 
-            <a href="#" className="dropdown-item">Books</a>
+            <Link to="/categorylist/books" className="dropdown-item">
+                Books
+            </Link>
 
-            <a href="#" className="dropdown-item">Furniture</a>
+            <Link to="/categorylist/furniture" className="dropdown-item">
+                Furniture
+            </Link>
 
-            <a href="#" className="dropdown-item">Toys</a>
+            <Link to="/categorylist/toys"
+              className="dropdown-item">
+                Toys
+            </Link>
 
           </div>
         </div>
@@ -37,8 +54,3 @@ function CategoriesMenu () {
 }
 
 export default CategoriesMenu
-
-// {items.items.map((item) => {
-//   return <li className="imageGridItem" key={item.id} >
-//     {item.category}
-//   </li>
