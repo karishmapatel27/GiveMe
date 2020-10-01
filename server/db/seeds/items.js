@@ -16,7 +16,7 @@ exports.seed = knex =>
         name: 'lego',
         category: 'toys',
         photo: 'https://trademe.tmcdn.co.nz/photoserver/full/1405703228.jpg',
-        description: 'LEGO Ghostbusters 75828 Ecto-1&2 556 pieces  Ages 8-14 This is a retired set.Built once, dismantled and in perfect condition. Has been bagged as original packaging.Will be sent in strong protective packaging to avoid damage to LEGO box and contents.',
+        description: 'LEGO Ghostbusters 75828 Ecto-1&2 556 pieces  Ages 8-14 This is a retired set.Built once, dismantled and in perfect condition. Has been bagged as original packaging.Will be sent in strong protective packaging to avoid damage to LEGO box and contents. Includes instruction booklet',
         location: 'Wellington'
       },
       {
