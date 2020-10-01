@@ -19,20 +19,6 @@ test('getItem returns the correct item', () => {
     })
 })
 
-test('getItemsByName returns the correct items', () => {
-  return items.getItemsByName('couch', testDb)
-    .then(item => {
-      return expect(item.id).toEqual(1)
-    })
-})
-
-test('getItemsByDescription returns the correct items', () => {
-  return items.getItemsByDescription('Lego', testDb)
-    .then(items => {
-      return expect(items.name).toMatch('lego')
-    })
-})
-
 test('getItemsByCategory returns the correct items', () => {
   return items.getItemsByCategory('toys', testDb)
     .then(items => {
