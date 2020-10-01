@@ -6,7 +6,7 @@ const testDb = knex(config)
 test('getItems returns the correct number of items', () => {
   return items.getItems(testDb)
     .then(items => {
-      expect(items).toHaveLength(7)
+      expect(items).toHaveLength(8)
       return null
     })
 })
