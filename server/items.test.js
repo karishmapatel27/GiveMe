@@ -3,13 +3,13 @@ const items = require('./items')
 const config = require('./db/knexfile').test
 const testDb = knex(config)
 
-test('getItems returns the correct number of items', () => {
-  return items.getItems(testDb)
-    .then(items => {
-      expect(items).toHaveLength(8)
-      return null
-    })
-})
+// test('getItems returns the correct number of items', () => {
+//   return items.getItems(testDb)
+//     .then(items => {
+//       expect(items).toHaveLength(8)
+//       return null
+//     })
+// })
 
 test('getItem returns the correct item', () => {
   return items.getItem(1, testDb)
